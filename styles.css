@@ -5,14 +5,17 @@
 .Logo {
     float: left;
     margin: 10px;
-
+}
+.Logout {
+    float: right;
+    margin: 10px;
 }
 .Header {
-    height: 100px;
+    height: 95px;
     background-color: gray;
 }
 .Header2 {
-    height: 55px;
+    height: 60px;
 }
 .Whitespace {
     width: 100%;
@@ -30,6 +33,9 @@
     width: 30%;
     border: 3px solid #73AD21;
     padding: 10px;
+}
+.centertext {
+    text-align: center;
 }
 .centerlong {
     margin: auto;
