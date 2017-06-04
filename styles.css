@@ -12,6 +12,14 @@ body{
   overflow: hidden;
 }
 
+#pagetopper{
+  margin-top: 100px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
 ul{
   margin: 0;
   padding: 0;
@@ -62,6 +70,22 @@ header a:hover{
   colour:#cccccc;
   font-weight: bold;
 }
+
+/* Reports Table */
+tr:hover {
+  background-color: #E8A18E
+}
+
+th{
+  background-color: #506077;
+}
+
+th, td{
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
 
 /* Showcase */
 #showcase{

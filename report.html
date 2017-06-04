@@ -26,7 +26,13 @@
         </ul>
       </nav>
     </header>
-  <div class="whitespace"></div>
+    <section id="pagetopper">
+    <div class="container">
+      <h1>Example Report Layout Page</h1>
+      <h3>Reports for the evolving query requirements with appropriate filter, sorting and aggregation of the query data</h3>
+    </div>
+  </section>
+
     <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
