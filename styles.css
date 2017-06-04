@@ -1,19 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
+
+
+
+/* Showcase */
+
+.showcase h1{
+  color: #ffffff;
+  font-size: 55px;
+  margin-bottom: 10px;
 }
+
+
+.showcase{
+  min-height: 200px;
+  background: url('img/showcase.jpg') no-repeat;
+  text-align: center;
+  filter: grayscale() opacity(0.5);
+}
+
+#howto{
+  min-height: 80px;
+  padding: 15px;
+  color: #ffffff;
+  background: #506077;
+}
+
+#howto h1{
+  float: left;
+}
+
+#howto form{
+  float: right;
+  padding-top: 20px;
+}
+
+body{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color:#f4f4f4
+}
+
 .Logo {
     float: left;
     margin: 10px;
 }
+
 .Logout {
     float: right;
     margin: 10px;
 }
-.Header {
-    height: 95px;
-    background-color: gray;
+header {
+    background-color:#506077;
+    color:#ffffff;
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#F75F14 3px solid;
 }
+
+header a{
+  color:#ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a{
+  color:#e8491d;
+  font-weight:bold;
+}
+
+header a:hover{
+  colour:#cccccc;
+  font-weight: bold;
+}
+
+
+
 .Header2 {
     height: 60px;
 }
@@ -22,12 +103,13 @@
     height: 5%;
     background-color: gray;
 }
-.container > div {
-    display: inline-block;
-    zoom: 1; /* Trigger hasLayout */
-    width: 25%;
-    text-align: center;
+
+
+ul{
+  margin: 0;
+  padding: 0;
 }
+
 .center {
     margin: auto;
     width: 30%;
