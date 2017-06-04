@@ -20,6 +20,8 @@
         <input type="submit" value="Sign In">
     </form>
 </div>
-
+<?php
+    include 'footer.php';
+?>
 </body>
 </html>
