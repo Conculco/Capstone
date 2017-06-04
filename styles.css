@@ -12,6 +12,13 @@ body{
   overflow: hidden;
 }
 
+.bcontainer{
+  margin-top: 100px;
+  width: 40%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
 #pagetopper{
   margin-top: 100px;
   align-items: center;
