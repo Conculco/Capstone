@@ -1,23 +1,10 @@
 /*Global*/
-html {
-    height: 100%;
-    box-sizing: border-box;
+body{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color:#f4f4f4
 }
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-body {
-    position: relative;
-    margin: 0;
-    padding-bottom: 6rem;
-    min-height: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-
-
 
 .container{
   width: 80%;
@@ -39,6 +26,8 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
+
 
 ul{
   margin: 0;
@@ -156,6 +145,16 @@ th, td{
     margin: center;
 }
 
+.left {
+  float: left;
+  width: 25%;
+  height: auto;
+  border-radius: 25px;
+  border: 4px solid #e8491d;
+  padding: 15px;
+}
+
+
 .Logout {
     float: right;
     margin: 10px;
@@ -185,25 +184,28 @@ th, td{
 #boxes .box img{
   width: 190px;
 }
-.footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #e8491d;
-    text-align: center;
+
+a:link {
+    text-decoration: none;
 }
 
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#boxes p{
+  font-weight: normal;
+}
 .whitespace{
   padding: 100px;
-}
-.whitespace2{
-    padding: 25px;
-}
-.whitespace3{
-  float: left;
-  padding: 25px;
 }
 .center {
   margin: auto;
@@ -212,6 +214,7 @@ th, td{
   border: 4px solid #e8491d;
   padding: 20px;
 }
+
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -230,15 +233,6 @@ input[type=password], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=date], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 input[type=submit] {
   width: 100%;
   background-color: #e8491d;
@@ -249,11 +243,11 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
-.left {
-  float: left;
-  width: 25%;
-  height: auto;
-  border-radius: 25px;
-  border: 4px solid #e8491d;
-  padding: 15px;
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
 }
