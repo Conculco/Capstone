@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Enterprise solution for Pet Clinics">
     <meta name="author" content="Lovely Pets">
-    <title>Lovey Pets | Welcome</title>
+    <title>Lovely Pets | Welcome</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="Logo"><a href="index.php"><img src="img/logo.png" width="150" height="75"></a></div>
+    <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
+      </div>
       <div id="branding">
         <h1>Lovely <span class="highlight">Pets</span></h1>
       </div>
+
       <nav>
         <ul>
             <li class="current"><a href="index.html">Home</a></li>
