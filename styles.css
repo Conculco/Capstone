@@ -244,7 +244,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-footer{
+.footer{
   padding: 20px;
   margin-top: 20px;
   color: #ffffff;
