@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Lovey Pets</title>
+    <title><font face = "OpenSans-Regular">Lovey Pets</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
 </head>
@@ -15,7 +15,7 @@
 </div>
 <div class="container">
     <!–- LEAVE THIS AS 1 ugly line –->
-    <div>Reports</div><div>Walk In Customer</div><div>Bookings</div><div>Inventroy</div>
+    <div>Reportng</div><div>Bookings</div><div>Walk In Customer</div><div>Inventroy</div>
 </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Lovey Pets</title>
@@ -9,9 +9,7 @@
 <?php
     include 'header.php';
 ?>
-<div>
- <div><a href="produce_report.php">
-    <div class="center">
+<div class="center">
     <form action="stock.php">
         <label>Product Code</label>
         <input type="text" placeholder="First Name">
@@ -33,7 +31,6 @@
 
         <input type="submit" value="Submit">
     </form>
-</div>
 </div>
 
 </body>
