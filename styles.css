@@ -240,3 +240,12 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.left {
+  float: left;
+  width: 25%;
+  height: auto;
+  border-radius: 25px;
+  border: 4px solid #e8491d;
+  padding: 15px;
+}
