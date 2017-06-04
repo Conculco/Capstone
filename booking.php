@@ -9,8 +9,10 @@
 <?php
     include 'header.php';
 ?>
-<div class="bcontainer">
-
+<div class="whitespace2"> </div>
+<div class="whitespace3"> </div>
+<div class="whitespace3"> </div>
+<div class="left">
     <label>First Name</label>
     <input type="text" value="Jhon">
 
@@ -31,7 +33,8 @@
 
     <input type="submit" value="Update">
 </div>
-<div class="bcontainer">
+<div class="whitespace3"> </div>
+<div class="left">
     <select>
         <option>Dog</option>
         <option>Cat</option>
@@ -39,7 +42,8 @@
     </select>
     <input type="submit" value="Create Booking">
 </div>
-<div class="bcontainer">
+<div class="whitespace3"> </div>
+<div class="left">
     <select>
         <option>Visit 1 - Cat - $124.12</option>
         <option>Visit 2 - Fox - $12.10</option>
@@ -47,5 +51,8 @@
     </select>
     <input type="submit" value="Create Invoice">
 </div>
+<?php
+include 'footer.php';
+?>
 </body>
 </html>

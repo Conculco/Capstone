@@ -9,6 +9,7 @@
 <?php
     include 'header.php';
 ?>
+<div class="whitespace2"> </div>
 <div class="center">
     <form action="booking.php">
         <label>First Name</label>
@@ -32,6 +33,9 @@
         <input type="submit" value="Submit">
     </form>
 </div>
-
+<div class="whitespace2"> </div>
+<?php
+include 'footer.php';
+?>
 </body>
 </html>
