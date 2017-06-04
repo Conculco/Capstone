@@ -7,11 +7,11 @@
 
     <nav>
         <ul>
-            <li class="current"><a href="index.html">Home</a></li>
+            <li class="current"><a href="index.php">Home</a></li>
             <li><a href="report.php">Reporting</a></li>
             <li><a href="booking.php">Bookings</a></li>
             <li><a href="walkin.php">Walk-Ins</a></li>
-            <li><a href="reception.html">Inventory</a></li>
+            <li><a href="reception.php">Inventory</a></li>
         </ul>
     </nav>
 </header>

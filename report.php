@@ -9,23 +9,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
-      </div>
-      <div id="branding">
-        <h1>Lovely <span class="highlight">Pets</span></h1>
-      </div>
-
-      <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="report.php">Reporting</a></li>
-            <li><a href="booking.php">Bookings</a></li>
-            <li><a href="walkin.php">Walk-Ins</a></li>
-            <li><a href="reception.html">Inventory</a></li>
-        </ul>
-      </nav>
-    </header>
+<?php
+include 'header.php';
+?>
     <section id="pagetopper">
     <div class="container">
       <h1>Example Report Layout Page</h1>
