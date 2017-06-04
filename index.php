@@ -30,19 +30,19 @@
       <div class="container">
         <div class="box">
           <a href="walkin.php"</a>
-          <img src="img/dogcat.png">
+          <img src="img/dogcat.png"></img>
           <h3>Make a Customer Booking<h3>
             <p>Click here to make a customer booking<p>
         </div>
         <div class="box">
           <a href="report.php"</a>
-          <img src="img/Screen.png">
+          <img src="img/Screen.png"></img>
           <h3>Launch Custom Reports<h3>
             <p>Click here to launch the custom reports module<p>
         </div>
         <div class="box">
           <a href="booking.php"</a>
-          <img src="img/syringe.png">
+          <img src="img/syringe.png"></img>
           <h3>Launch Inventory Manager<h3>
             <p>Click here to launch the inventory manager<p>
         </div>
