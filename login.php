@@ -9,17 +9,19 @@
 <?php
     include 'header.php';
 ?>
-<div class="center">
-    <form action="index.php">
-        <label>Username</label>
-        <input type="text" placeholder="Username">
+<div class="whitespace"> </div>
+    <div class="center">
+        <form action="index.php">
+            <label>Username</label>
+            <input type="text" placeholder="Username">
 
-        <label>Password</label>
-        <input type="password" placeholder="Password">
+            <label>Password</label>
+            <input type="password" placeholder="Password">
 
-        <input type="submit" value="Sign In">
-    </form>
-</div>
+            <input type="submit" value="Sign In">
+        </form>
+    </div>
+<div class="whitespace"> </div>
 <?php
     include 'footer.php';
 ?>
