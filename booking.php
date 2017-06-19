@@ -51,6 +51,9 @@
     </select>
     <input type="submit" value="Create Invoice">
 </div>
+<div class="whitespace"> </div>
+<div class="whitespace"> </div>
+<div class="whitespace"> </div>
 <?php
 include 'footer.php';
 ?>
