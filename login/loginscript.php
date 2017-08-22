@@ -16,12 +16,12 @@ try {
           $_SESSION["id"] = $row["id"];
           $_SESSION["username"] = $row["username"];
           $_SESSION["email"] = $row["email"];
-          header("Location: http://fastapps04.qut.edu.au:8080/n9562125/index.php");
+          header("Location: http://54.66.218.79/Capstone/login.php");
       } else {
           //Password is invalid
           $_SESSION["errorUser"] = $_POST["username"];
           $_SESSION["errorPass"] = $_POST["password"];
-          header("Location: http://fastapps04.qut.edu.au:8080/n9562125/login.php");
+          header("Location: http://54.66.218.79/Capstone/login.php");
       }
     }
   } else {
