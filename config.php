@@ -1,5 +1,5 @@
 <?php
-$dbservername = "localhost";
+$dbservername = "lovelypetsdbinstance.cqs865i0h9cb.ap-southeast-2.rds.amazonaws.com:3306";
 $dbusername = "phpmyadmin";
 $dbpassword = "Capstone42";
 $dbname = "LovelyPetsDB";
