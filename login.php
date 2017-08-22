@@ -18,10 +18,10 @@ session_start();
     <div class="center">
         <form action="login/loginscript.php" method="post">
             <label>Username</label>
-            <input type="text" placeholder="Username">
+            <input name="username" type="text" placeholder="Username">
 
             <label>Password</label>
-            <input type="password" placeholder="Password">
+            <input name="password" type="password" placeholder="Password">
 
             <input type="submit" value="Sign In">
         </form>

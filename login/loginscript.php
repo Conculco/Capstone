@@ -12,7 +12,7 @@ try {
     $sql = $conn->prepare("SELECT * FROM Staff WHERE username = ?");
     $sql->execute(array($_POST['username']));
     $result = $sql->fetchall();
-    
+	
     if ($sql->rowCount() == 1){
       foreach ($result as $row) {
       //if (password_verify($_POST["password"], $row["password"]))
@@ -21,19 +21,21 @@ try {
           $_SESSION["id"] = $row["id"];
           $_SESSION["username"] = $row["username"];
           $_SESSION["email"] = $row["email"];
-          header("Location: http://54.66.218.79/Capstone/login.php");
+          header("Location: http://IT_WORKED");
+		  die();
       } else {
           //Password is invalid
           $_SESSION["errorUser"] = $_POST["username"];
           $_SESSION["errorPass"] = $_POST["password"];
-          header("Location: http://54.66.218.79/Capstone/login.php");
+          header("Location: http://IT_FAILED");
+		  die();
       }
     }
   } else {
     //Username Not Found
     $_SESSION["errorUser"] = $_POST["username"];
     $_SESSION["errorPass"] = $_POST["password"];
-    header("Location: http://fastapps04.qut.edu.au:8080/n9562125/login.php");
+    //header("Location: localhost/Capstone/login.php");
 }
 }
 catch(PDOException $e) {
