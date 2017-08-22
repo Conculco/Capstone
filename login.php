@@ -1,17 +1,22 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+<!DOCTYPE html>
 <html>
+
 <head>
     <title>Lovey Pets</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
 <?php
     include 'header.php';
 ?>
 <div class="whitespace"> </div>
     <div class="center">
-        <form action="index.php">
+        <form action="login/loginscript.php" method="post">
             <label>Username</label>
             <input type="text" placeholder="Username">
 
@@ -26,4 +31,5 @@
     include 'footer.php';
 ?>
 </body>
+
 </html>
