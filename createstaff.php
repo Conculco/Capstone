@@ -14,9 +14,8 @@ session_start();
 <?php
     include 'header.php';
 ?>
-<div class="whitespace"> </div>
     <div class="center">
-        <form action="createstaff/staffscript.php" method="post">
+        <form action="create/staffscript.php" method="post">
 			<label>Clinic ID</label>
             <input name="clinic_id" type="text" placeholder="1">
 		

@@ -11,7 +11,7 @@ try {
 														
 	$statement->execute(array(
 	"clinic_id" => $_POST['clinic_id'],
-    "firstname" => $_POST['username'],
+    "firstname" => $_POST['firstname'],
     "lastname" => $_POST['lastname'],
 	"dob" => $_POST['dob'],
 	"username" => $_POST['username'],
