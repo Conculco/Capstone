@@ -1,3 +1,8 @@
+<body>
+    <h1>Lovely Pets Information System</h1>
+</body>
+
+
 <?php
   include("../config.php");
   session_start();
@@ -35,3 +40,4 @@ catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
 ?>
+
