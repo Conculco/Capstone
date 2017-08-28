@@ -16,6 +16,15 @@ include("./config.php");
     include 'header.php';
 ?>
 
+<div class="center">
+    <form action="./searchcustomer.php" method="post">
+        <label>Search</label>
+        <input name="searchinput" type="text" placeholder="Search">
+
+        <input type="submit" value="Search">
+    </form>
+</div>
+
 <?php
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th></tr>";
@@ -39,7 +48,17 @@ class TableRows extends RecursiveIteratorIterator {
 }
 
 try {
+    $search = $_POST["searchinput"];
+
     $stmt = $conn->prepare("SELECT * FROM Customer");
+
+    if ($search != ""){
+        $stmt = $conn->prepare("SELECT * FROM Customer WHERE firstname LIKE '%$search%'");
+    }
+
+
+
+
     $stmt->execute();
 
     // set the resulting array to associative
