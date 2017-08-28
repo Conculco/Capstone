@@ -5,7 +5,7 @@ session_start();
 <html>
 
 <head>
-    <title>Lovey Pets2</title>
+    <title>Lovey Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
