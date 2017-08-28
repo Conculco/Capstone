@@ -17,7 +17,7 @@ session_start();
     <div class="center">
         <form action="create/bookingscript.php" method="post">
 			<label>pet_id</label>
-            <input name="pet_id" type="text" value="<?php echo $_GET['id'];?>">
+            <input name="pet_id" type="text" value="<?php echo $_GET['pet_id'];?>">
 			
 			<label>clinic_id</label>
             <input name="clinic_id" type="text" value="1">

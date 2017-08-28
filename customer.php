@@ -51,7 +51,7 @@ echo "<label>Pets</label>";
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>Pet Name</th><th>Date of Birth</th><th>Sex</th><th>Species</th><th>Breed</th><th>Description</th><th>Microchip ID</th></tr>";
         while($row = $result->fetch_assoc()) {
-            $url = $row["pet_id"];
+            $pet_id = $row["pet_id"];
             echo "<tr>" .
                 "<td>" . $row["petname"] . "</td>".
                 "<td>" . $row["dob"] . "</td>".
@@ -60,7 +60,7 @@ echo "<label>Pets</label>";
                 "<td>" . $row["breed"] . "</td>".
                 "<td>" . $row["description"] . "</td>".
                 "<td>" . $row["microchip_id"] . "</td>".
-                "<td>" . "<button type=\"submit\" formaction=\"createbooking.php?id=$url\">Booking</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"createbooking.php?pet_id=$pet_id\">Booking</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";
