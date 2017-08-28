@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include("./config.php");
+include("./configsqli.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,63 +16,45 @@ include("./config.php");
     include 'header.php';
 ?>
 
-<div class="center">
-    <form action="./searchcustomer.php" method="post">
-        <label>Search</label>
-        <input name="searchinput" type="text" placeholder="Search">
+    <div class="center">
+        <form action="./searchcustomer.php" method="post">
+            <label>Search</label>
+            <input name="searchinput" type="text" placeholder="Search">
 
-        <input type="submit" value="Search">
-    </form>
-</div>
+            <input type="submit" value="Search">
+        </form>
+    </div>
 
-<?php
-echo "<table style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th></tr>";
-
-class TableRows extends RecursiveIteratorIterator {
-    function __construct($it) {
-        parent::__construct($it, self::LEAVES_ONLY);
+    <?php
+    $sql = "SELECT * FROM Customer";
+    if(isset($_POST['searchinput'])){
+        $search = $_POST['searchinput'];
+        $sql = "SELECT * FROM Customer WHERE firstname LIKE '%$search%'";
     }
 
-    function current() {
-        return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        echo "<form action='' method='post'>";
+        echo "<table style='border: solid 1px black;'>";
+        echo "<tr><th>Id</th><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th></tr>";
+        while($row = $result->fetch_assoc()) {
+            $url = $row["customer_id"];
+            echo "<tr>" .
+                "<td>" . $row["emergencyContact"] . "</td>" .
+                "<td>" . $row["firstname"] . "</td>".
+                "<td>" . $row["lastname"] . "</td>".
+                "<td>" . $row["address"] . "</td>".
+                "<td>" . $row["email"] . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customer.php?id=$url\">Select</button>" . "</td>".
+                "</tr>";
+        }
+        echo "</form>";
+    } else {
+        echo "0 results";
     }
-
-    function beginChildren() {
-        echo "<tr>";
-    }
-
-    function endChildren() {
-        echo "</tr>" . "\n";
-    }
-}
-
-try {
-    $search = $_POST["searchinput"];
-
-    $stmt = $conn->prepare("SELECT * FROM Customer");
-
-    if ($search != ""){
-        $stmt = $conn->prepare("SELECT * FROM Customer WHERE firstname LIKE '%$search%'");
-    }
-
-
-
-
-    $stmt->execute();
-
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-    echo $v;
-    }
-}
-catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-
-echo "</table>";
+    echo "</table>";
 ?>
 
 <?php

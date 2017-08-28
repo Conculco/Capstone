@@ -17,10 +17,10 @@ session_start();
     <div class="center">
         <form action="create/bookingscript.php" method="post">
 			<label>pet_id</label>
-            <input name="pet_id" type="text" placeholder="pet_id">
+            <input name="pet_id" type="text" value="<?php echo $_GET['id'];?>">
 			
 			<label>clinic_id</label>
-            <input name="clinic_id" type="text" placeholder="clinic_id">
+            <input name="clinic_id" type="text" value="1">
 		
             <label>bookingType</label>
             <input name="bookingType" type="text" placeholder="bookingType">
@@ -31,7 +31,7 @@ session_start();
 			<label>date</label>
             <input name="date" type="text" placeholder="2017-08-02">
 
-            <input type="submit" value="Create Staff">
+            <input type="submit" value="Create Booking">
         </form>
     </div>
 <div class="whitespace"> </div>
