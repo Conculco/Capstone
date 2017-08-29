@@ -10,11 +10,17 @@
 <?php
     include 'header.php';
 ?>
+<?php
+    session_start();
+    session_unset();
+?>
 <div class="center">
     <div class="centertext">
         <h1>Logout Successful</h1>
     </div>
 </div>
-
+<?php
+include 'footer.php';
+?>
 </body>
 </html>

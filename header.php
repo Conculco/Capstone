@@ -7,7 +7,12 @@
 
     <nav>
         <ul>
-            <li>Welcome, <b><?php echo $_SESSION["username"];?></b></li>
+            <?php
+            if (isset($_SESSION["username"])){
+                    echo "<li>Welcome, <b>" . $_SESSION["username"] . "</b></li>";
+                    echo "<li><a href=\"logout.php\">Logout</a></li>";
+            }
+            ?>
             <li class="current"><a href="index.php">Home</a></li>
             <li><a href="searchcustomer.php">Search</a></li>
             <li><a href="createcustomer.php">Customer</a></li>
