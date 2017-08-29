@@ -8,6 +8,9 @@ session_start();
     <title>Lovey Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -15,41 +18,41 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form action="create/staffscript.php" method="post">
+        <form name="form" id="form">
 			<label>Clinic ID</label>
-            <input name="clinic_id" type="text" placeholder="1">
-		
+            <input id="clinic_id" type="text" placeholder="1">
+
             <label>First Name</label>
-            <input name="firstname" type="text" placeholder="First Name">
-			
+            <input id="firstname" type="text" placeholder="First Name">
+
 			<label>Last Name</label>
-            <input name="lastname" type="text" placeholder="Last Name">
-			
+            <input id="lastname" type="text" placeholder="Last Name">
+
 			<label>Date of Birth</label>
-            <input name="dob" type="text" placeholder="2017-08-02">
+            <input id="dob" type="text" placeholder="2017-08-02">
 
 			<label>Username</label>
-            <input name="username" type="text" placeholder="Username">
-			
+            <input id="username" type="text" placeholder="Username">
+
 			<label>Password</label>
-            <input name="password" type="password" placeholder="Password">
-			
+            <input id="password" type="password" placeholder="Password">
+
 			<label>Contact Number</label>
-            <input name="phoneNumber" type="text" placeholder="Contact Number">
-			
+            <input id="phoneNumber" type="text" placeholder="Contact Number">
+
 			<label>Street Address</label>
-            <input name="address" type="text" placeholder="Street Address">
+            <input id="address" type="text" placeholder="Street Address">
 
 			<label>City</label>
-            <input name="city" type="text" placeholder="City">
-			
-			<label>Post Code</label>
-            <input name="postCode" type="text" placeholder="Post Code">
-			
-			<label>Email</label>
-            <input name="email" type="text" placeholder="Email">
+            <input id="city" type="text" placeholder="City">
 
-            <input type="submit" value="Create Staff">
+			<label>Post Code</label>
+            <input id="postCode" type="text" placeholder="Post Code">
+
+			<label>Email</label>
+            <input id="email" type="text" placeholder="Email">
+
+            <input type="button" id="submit" onclick="createStaffFunction()" value="Create Staff">
         </form>
     </div>
 <div class="whitespace"> </div>

@@ -8,6 +8,9 @@ session_start();
     <title>Lovey Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -15,23 +18,23 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form action="create/customerscript.php" method="post">
+        <form name="form" id="form">
             <label>First Name</label>
-            <input name="firstname" type="text" placeholder="First Name">
-			
+            <input id="firstname" type="text" placeholder="First Name">
+
 			<label>Last Name</label>
-            <input name="lastname" type="text" placeholder="Last Name">
+            <input id="lastname" type="text" placeholder="Last Name">
 
 			<label>Emergency Contact Number</label>
-            <input name="emergencyContact" type="text" placeholder="Contact Number">
-			
+            <input id="emergencyContact" type="text" placeholder="Contact Number">
+
 			<label>Street Address</label>
-            <input name="address" type="text" placeholder="Street Address">
+            <input id="address" type="text" placeholder="Street Address">
 
 			<label>Email</label>
-            <input name="email" type="text" placeholder="Email">
+            <input id="email" type="text" placeholder="Email">
 
-            <input type="submit" value="Create Customer">
+            <input id="submit" type="button" onclick="customerCreateFunction()" value="Create Customer">
         </form>
     </div>
 <div class="whitespace"> </div>
