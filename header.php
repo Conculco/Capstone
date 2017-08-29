@@ -7,9 +7,10 @@
 
     <nav>
         <ul>
+            <li>Welcome, <b><?php echo $_SESSION["username"];?></b></li>
             <li class="current"><a href="index.php">Home</a></li>
-            <li><a href="report.php">Reporting</a></li>
-            <li><a href="booking.php">Bookings</a></li>
+            <li><a href="searchcustomer.php">Search</a></li>
+            <li><a href="createcustomer.php">Customer</a></li>
             <li><a href="walkin.php">Walk-Ins</a></li>
             <li><a href="reception.php">Inventory</a></li>
         </ul>

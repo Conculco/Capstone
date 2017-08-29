@@ -17,5 +17,6 @@ if (isset($_POST['clinic_id'])) {
 $query = mysql_query("insert into Staff(clinic_id, firstname, lastname, dob, username, password, phoneNumber, address, city, postCode, email) values ('$clinic_id2', '$firstname2', '$lastname2', '$dob2', '$username2', '$password2', '$phoneNumber2', '$address2', '$city2', '$postCode2', '$email2')"); //Insert Query
 echo "Form Submitted succesfully";
 }
+echo "Form Submitted FAILED";
 mysql_close($connection); // Connection Closed
 ?>

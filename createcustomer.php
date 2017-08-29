@@ -42,5 +42,4 @@ session_start();
     include 'footer.php';
 ?>
 </body>
-
 </html>

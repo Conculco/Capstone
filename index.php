@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include("./config.php");
+session_start();
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,6 +16,8 @@
 <?php
     include 'header.php';
 ?>
+
+
 <section id="showcase">
   <div class="container">
   <h1>Lovely Pets Information System</h1>
@@ -29,16 +35,16 @@
     <section id="boxes">
       <div class="container">
         <div class="box">
-          <a href="walkin.php"</a>
+          <a href="searchcustomer.php"</a>
           <img src="img/dogcat.png"></img>
-          <h3>Make a Customer Booking<h3>
-            <p>Click here to make a customer booking<p>
+          <h3>Search for Customer<h3>
+            <p>Click here to find a customer<p>
         </div>
         <div class="box">
-          <a href="report.php"</a>
+          <a href="createcustomer.php"</a>
           <img src="img/Screen.png"></img>
-          <h3>Launch Custom Reports<h3>
-            <p>Click here to launch the custom reports module<p>
+          <h3>Create New Customer<h3>
+            <p>Click here to create a new customer<p>
         </div>
         <div class="box">
           <a href="booking.php"</a>

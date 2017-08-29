@@ -20,10 +20,7 @@ session_start();
     <div class="center">
         <form name="form" id="form">
             <label>customer_id</label>
-            <input id="customer_id" type="text" placeholder="customer_id">
-
-			<label>Treatment</label>
-            <input id="treatment_id" type="text" placeholder="treatment_id">
+            <input id="customer_id" type="text" value="<?php echo $_GET['id'];?>">
 
 			<label>Pet Name</label>
             <input id="petname" type="text" placeholder="">
@@ -34,16 +31,16 @@ session_start();
 			<label>Sex</label>
             <input id="sex" type="text" placeholder="Male/Female">
 
-			<label>species</label>
-            <input id="species" type="text" placeholder="species">
+			<label>Species</label>
+            <input id="species" type="text" placeholder="Cat/Dog">
 
-			<label>breed</label>
-            <input id="breed" type="text" placeholder="breed">
+			<label>Breed</label>
+            <input id="breed" type="text" placeholder="">
 
-			<label>description</label>
+			<label>Description</label>
             <input id="description" type="text" placeholder="description">
 
-			<label>microchip_id</label>
+			<label>Microchip_id</label>
             <input id="microchip_id" type="text" placeholder="microchip_id">
 
             <input type="button" id="submit" onclick="createPetFunction()" value="Create Pet">

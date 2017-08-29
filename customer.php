@@ -1,9 +1,8 @@
-﻿<?php
-session_start();
-//include("./config.php");
+﻿<!DOCTYPE html>
+<?php
 include("./configsqli.php");
+session_start();
 ?>
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -41,8 +40,9 @@ include("./configsqli.php");
     } else {
         echo "0 results";
     }
-
-echo "<label>Pets</label>";
+    echo "<form action='' method='post'>";
+    echo "<label>Pets</label> <button type=\"submit\" formaction=\"createpet.php?id=$id\">Add Pet</button><br>";
+    echo "</form>";
     $sql = "SELECT * FROM Pet Where customer_id = $id";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
