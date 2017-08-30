@@ -5,6 +5,20 @@ session_start();
 <html>
 
 <head>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["form"]["firstname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+
+
+
+
     <title>Lovey Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -18,7 +32,7 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form name="form" id="form">
+        <form name="form" id="form" onsubmit="return validateForm()">
             <label>First Name</label>
             <input id="firstname" type="text" placeholder="First Name">
 
