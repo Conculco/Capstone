@@ -48,7 +48,7 @@ session_start();
 			<label>Email</label>
             <input id="email" type="text" placeholder="Email">
 
-            <input id="submit" type="button" onclick="customerCreateFunction()" value="Create Customer">
+            <input type="submit" value="Create Customer">
         </form>
     </div>
 <div class="whitespace"> </div>
