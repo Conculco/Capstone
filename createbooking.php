@@ -6,13 +6,15 @@ session_start();
 
 <head>
     <title>Lovey Pets</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+
     <!-- Minified Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
     <!-- Minified JS library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Minified Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -20,16 +22,11 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form id="form" name="form">
-            <label>pet_id</label>
-            <input name="pet_id" type="text" value="<?php echo $_GET['pet_id'];?>">
-
-			      <label>clinic_id</label>
-            <input name="clinic_id" type="text" value="1">
-
+        <form action="create/createbooking.php" method="post">
+            <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
+            <input name="clinic_id" type="hidden" value="1">
             <label>Booking Type</label>
             <input name ="bookingType" type="text" name="booking_type" class="form-control">
-
             <label>Date Time</label>
             <input size="16" type="text" name="dateTime" class="form-control" id="dateTime" readonly>
 
