@@ -20,20 +20,20 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form method="post" action="">
+        <form id="form" name="form">
             <label>pet_id</label>
-            <input id="pet_id" type="text" value="<?php echo $_GET['pet_id'];?>">
+            <input name="pet_id" type="text" value="<?php echo $_GET['pet_id'];?>">
 
 			      <label>clinic_id</label>
-            <input id="clinic_id" type="text" value="1">
+            <input name="clinic_id" type="text" value="1">
 
             <label>Booking Type</label>
-            <input id ="bookingType" type="text" name="booking_type" class="form-control">
+            <input name ="bookingType" type="text" name="booking_type" class="form-control">
 
             <label>Date Time</label>
-            <input size="16" type="text" name="event_datetime" class="form-control" id="dateTime" readonly>
+            <input size="16" type="text" name="dateTime" class="form-control" id="dateTime" readonly>
 
-            <input id="submit" type='button' onclick="bookingFunction()" value="Create Booking">
+            <input type='submit' value="Create Booking">
         </form>
 </div>
 
@@ -45,7 +45,7 @@ $(function () {
     var time = today.getHours() + ":" + today.getMinutes();
     var dateTime = date+' '+time;
 $("#dateTime").datetimepicker({
-        format: 'yyyy-mm-dd hh:ii'
+        format: 'yyyy-mm-dd hh:ii:ss'
       });
     });
 </script>

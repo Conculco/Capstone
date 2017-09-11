@@ -2,11 +2,10 @@ function bookingFunction() {
 var pet_id = document.getElementById("pet_id").value;
 var clinic_id = document.getElementById("clinic_id").value;
 var bookingType = document.getElementById("bookingType").value;
-var time = document.getElementById("time").value;
-var date = document.getElementById("date").value;
+var dateTime = document.getElementById("dateTime").value;
 // Returns successful data submission message when the entered information is stored in database.
-var dataString = 'pet_id1=' + pet_id + '&clinic_id1=' + clinic_id + '&bookingType1=' + bookingType + '&time1=' + time + '&date1=' + date;
-if (pet_id == '' || clinic_id == '' || bookingType == '' || time == '' || date == '') {
+var dataString = 'pet_id1=' + pet_id + '&clinic_id1=' + clinic_id + '&bookingType1=' + bookingType + '&dateTime1=' + dateTime;
+if (pet_id == '' || clinic_id == '' || bookingType == '' || dateTime == '') {
 alert("Please Fill All Fields");
 } else {
 // AJAX code to submit form.
