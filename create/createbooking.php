@@ -12,7 +12,7 @@ try {
         "timeSlot" => $_POST['timeSlot'],
     ));
     $id = $_POST['pet_id'];
-    header("Location: ../findcustomer.php");
+    header("Location: ../calendar2.php");
     die();
 }
 catch(PDOException $e) {
