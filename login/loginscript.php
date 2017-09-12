@@ -22,6 +22,7 @@ try {
           $_SESSION["id"] = $row["id"];
           $_SESSION["username"] = $row["username"];
           $_SESSION["email"] = $row["email"];
+          $_SESSION["access"] = $row["access"];
           header("Location: ../index.php");
 		  die();
       } else {

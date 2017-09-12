@@ -12,7 +12,7 @@ session_start();
 
 <body>
 <?php
-    include 'header.php';
+    include 'header_login.php';
 ?>
 <div class="whitespace"> </div>
     <div class="center">

@@ -1,3 +1,6 @@
+<?php
+include 'access_control.php';
+?>
 <header>
     <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
     </div>
@@ -21,3 +24,4 @@
         </ul>
     </nav>
 </header>
+
