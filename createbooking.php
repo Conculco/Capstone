@@ -27,10 +27,12 @@ session_start();
 <script>
 
   $( function() {
-    $( "#datepicker" ).datepicker();
+    $( "#date" ).datepicker({
+        dateFormat: 'yy-mm-dd'
+      });
   } );
   </script>
-
+<div class="whitespace"> </div>
     <div class="center">
         <form action="create/createbooking.php" method="post">
             <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
@@ -45,7 +47,7 @@ session_start();
                 <option value="5">Other</option>
               </select>
             <label>Date</label>
-            <input type="text" name="datepicker" id="datepicker" readonly>
+            <input type="text" name="date" id="date" readonly>
             <lebel>Time Slot</label>
               <select id="timeSlot" name="timeSlot">
                 <option value="0">--Select Time Slot--</option>
@@ -71,7 +73,7 @@ session_start();
         </form>
 </div>
 
-<div class="whitespace"> </div>
+
 <?php
     include 'footer.php';
 ?>
