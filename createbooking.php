@@ -1,5 +1,8 @@
-﻿<?php
+<?php
 session_start();
+?>
+<?php
+include 'configsqli.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +14,14 @@ session_start();
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+        $(document).ready(function () {
+          $('#date').change(function() {
+            var selectedValue = $(this).val();
+            $('#divResult').html(selectedValue);
+          });
+        });
+      </script>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery UI Datepicker - Default functionality</title>
@@ -26,11 +36,12 @@ session_start();
 ?>
 <script>
 
-  $( function() {
-    $( "#date" ).datepicker({
-        dateFormat: 'yy-mm-dd'
-      });
-  } );
+  $( function datepicking() {
+$("#date").datepicker({
+    dateFormat: 'yy-mm-dd'
+});
+});
+
   </script>
     <div class="center">
         <form action="create/createbooking.php" method="post">
@@ -46,30 +57,64 @@ session_start();
                 <option value="5">Other</option>
               </select>
             <label>Date</label>
-            <input type="text" name="date" id="date" readonly>
+            <input type="text" name="date" id="date" onchange ="javascript:changeDate();" readonly>
             <lebel>Time Slot</label>
               <select id="timeSlot" name="timeSlot">
-                <option>--Select Time Slot--</option>
-                <option value="0">9:00 - 9:30</option>
-                <option value="1">9:30 - 10:00</option>
-                <option value="2">10:00 - 10:30</option>
-                <option value="3">10:30 - 11:00</option>
-                <option value="4">11:00 - 11:30</option>
-                <option value="5">11:30 - 12:00</option>
-                <option value="6">12:00 - 12:30</option>
-                <option value="7">12:30 - 13:00</option>
-                <option value="8">13:00 - 10:30</option>
-                <option value="9">13:30 - 14:00</option>
-                <option value="10">14:00 - 14:30</option>
-                <option value="11">14:30 - 15:00</option>
-                <option value="12">15:00 - 15:30</option>
-                <option value="13">15:30 - 16:00</option>
-                <option value="14">16:00 - 16:30</option>
-                <option value="15">16:30 - 17:00</option>
+                <option value=""></option>
+                <?php
+                $tsa = array(
+                '9:00 - 9:30'
+                ,'9:30 - 10:00'
+                ,'10:00 - 10:30'
+                ,'10:30 - 11:00'
+                ,'11:00 - 11:30'
+                ,'11:30 - 12:00'
+                ,'12:00 - 12:30'
+                ,'12:30 - 13:00'
+                ,'13:00 - 13:30'
+                ,'13:30 - 14:00'
+                ,'14:00 - 14:30'
+                ,'14:30 - 15:00'
+                ,'15:00 - 15:30'
+                ,'15:30 - 16:00'
+                ,'16:00 - 16:30'
+                ,'16:30 - 17:00');
+                $rows = array();
+
+                $today = $_POST['date'];
+                echo 'date';
+
+                echo "<table style=width:10% border=1>";
+                echo "<tr><td><b>";
+                echo date("l");
+                echo "<b></td></tr>";
+
+                $sql = "SELECT * FROM Booking WHERE Booking.date = '$today'";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo $row["timeSlot"];
+                        array_push($rows, $row["timeSlot"]);
+                    }
+                }
+                echo $today;
+                for ($i = 0; $i<16; $i++) {
+                    echo "<tr>";
+                    if (!in_array($i, $rows)) {
+                        echo '<option value="'.$i.'">'.$tsa[$i].'</option>';
+                    } else {
+
+                    }
+                    echo "</tr>";
+                  }
+                 ?>
               </select>
 
             <input type='submit' value="Create Booking">
         </form>
+        <div id="divResult">
+        </div>
 </div>
 
 
