@@ -82,13 +82,16 @@ header a:hover{
 tr:hover {
   background-color: #E8A18E
 }
+td.booked {
+  background-color: #E8A18E
+}
 
 th{
   background-color: #506077;
 }
 
 th, td{
-  padding: 15px;
+  padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
@@ -212,6 +215,17 @@ a:active {
   border: 4px solid #e8491d;
   padding: 20px;
 }
+
+.center2 {
+  margin: auto;
+  width: 50%;
+  border-radius: 25px;
+  border: 4px solid #e8491d;
+  padding: 20px;
+}
+
+
+
 
 input[type=text], select {
   width: 100%;

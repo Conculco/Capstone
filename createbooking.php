@@ -32,7 +32,6 @@ session_start();
       });
   } );
   </script>
-<div class="whitespace"> </div>
     <div class="center">
         <form action="create/createbooking.php" method="post">
             <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
