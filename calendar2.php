@@ -65,7 +65,7 @@ include 'configsqli.php';
         ,'15:30 - 16:00'
         ,'16:00 - 16:30'
         ,'16:30 - 17:00');
-    for ($i = 0; $i<16; $i++) {
+    for ($i = 0; $i<15; $i++) {
         echo "<tr>";
         if(in_array($i, $rows)){
             echo "<td class=$i>Booked:$timeslotarray[$i]</td>";
