@@ -24,7 +24,6 @@ include("./configsqli.php");
             <input type="submit" value="Search">
         </form>
     </div>
-
     <?php
     $sql = "SELECT * FROM Customer";
     if(isset($_POST['searchinput'])){
@@ -37,8 +36,8 @@ include("./configsqli.php");
     if ($result->num_rows > 0) {
         // output data of each row
         echo "<form action='' method='post'>";
-        echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Id</th><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th></tr>";
+        echo "<table align=\"center\" style='border: solid 1px black;'>";
+        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th></tr>";
         while($row = $result->fetch_assoc()) {
             $url = $row["customer_id"];
             echo "<tr>" .
@@ -55,8 +54,7 @@ include("./configsqli.php");
         echo "0 results";
     }
     echo "</table>";
-?>
-
+    ?>
 <?php
     include 'footer.php';
 ?>

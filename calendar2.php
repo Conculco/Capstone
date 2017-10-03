@@ -29,50 +29,53 @@ include 'configsqli.php';
 <?php
 include 'configsqli.php';
 ?>
-<table style="width:10%" border="1">
-    <tr>
-        <td><b><?php echo date("l") ?><b></td>
-    </tr>
     <?php
-        $rows = array();
-        $today = date("Y-m-d");
-        echo $today;
-        $sql = "SELECT * FROM Booking WHERE Booking.date = '$today'";
-        $result = $conn->query($sql);
+    $rows = array();
 
-        if ($result->num_rows > 0) {
+    $today = date("Y-m-d");
+    $date = date("Y-m-d", strtotime(' + 1 days'));
+    echo $date;
+
+
+    echo "<table style=width:10% border=1>";
+    echo "<tr><td><b>";
+    echo date("l");
+    echo "<b></td></tr>";
+
+    $sql = "SELECT * FROM Booking WHERE Booking.date = '$today'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
         // output data of each row
-            while ($row = $result->fetch_assoc()) {
-             echo $row["timeSlot"];
-             array_push($rows, $row["timeSlot"]);
-            }
+        while ($row = $result->fetch_assoc()) {
+            echo $row["timeSlot"];
+            array_push($rows, $row["timeSlot"]);
         }
-
-        $timeslotarray = array(
+    }
+    $timeslotarray = array(
         '9:00 - 9:30'
-        ,'9:30 - 10:00'
-        ,'10:00 - 10:30'
-        ,'10:30 - 11:00'
-        ,'11:00 - 11:30'
-        ,'11:30 - 12:00'
-        ,'12:00 - 12:30'
-        ,'12:30 - 13:00'
-        ,'13:00 - 13:30'
-        ,'13:30 - 14:00'
-        ,'14:00 - 14:30'
-        ,'14:30 - 15:00'
-        ,'15:00 - 15:30'
-        ,'15:30 - 16:00'
-        ,'16:00 - 16:30'
-        ,'16:30 - 17:00');
-    for ($i = 0; $i<16; $i++) {
-        echo "<tr>";
-        if(in_array($i, $rows)){
-            echo "<td class=$i>Booked:$timeslotarray[$i]</td>";
-        }else{
-            echo "<td class=$i>Not Booked:$timeslotarray[$i]</td>";
-        }
+    , '9:30 - 10:00'
+    , '10:00 - 10:30'
+    , '10:30 - 11:00'
+    , '11:00 - 11:30'
+    , '11:30 - 12:00'
+    , '12:00 - 12:30'
+    , '12:30 - 13:00'
+    , '13:00 - 13:30'
+    , '13:30 - 14:00'
+    , '14:00 - 14:30'
+    , '14:30 - 15:00'
+    , '15:00 - 15:30'
+    , '15:30 - 16:00'
+    , '16:00 - 16:30'
+    , '16:30 - 17:00');
 
+    for ($i = 0; $i < 16; $i++) {
+        echo "<tr>";
+        if (in_array($i, $rows)) {
+            echo "<td class='booked'>$timeslotarray[$i]</td>";
+        } else {
+            echo "<td class='notbooked'>$timeslotarray[$i]</td>";
+        }
         echo "</tr>";
     }
 ?>

@@ -15,11 +15,11 @@ session_start();
 <?php
     include 'header.php';
 ?>
-
+<div class="center2">
 <?php
     $id = $_GET['id'];
 
-    echo "<label>Customer Details</label>";
+    echo "<h1>Customer Details</h1>";
     $sql = "SELECT * FROM Customer Where customer_id = $id";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -41,7 +41,7 @@ session_start();
         echo "0 results";
     }
     echo "<form action='' method='post'>";
-    echo "<label>Pets</label> <button type=\"submit\" formaction=\"createpet.php?id=$id\">Add Pet</button><br>";
+    echo "<h1>Pets <button type=\"submit\" formaction=\"createpet.php?id=$id\">Add Pet</button></h1>";
     echo "</form>";
     $sql = "SELECT * FROM Pet Where customer_id = $id";
     $result = $conn->query($sql);
@@ -70,7 +70,7 @@ session_start();
     }
 
 ?>
-
+</div>
 
 <?php
     include 'footer.php';
