@@ -18,41 +18,44 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form name="form" id="form">
+        <form action="create/staffscript.php" method="post">
 			<label>Clinic ID</label>
-            <input id="clinic_id" type="text" placeholder="1">
+            <input name="clinic_id" type="text" placeholder="">
 
             <label>First Name</label>
-            <input id="firstname" type="text" placeholder="First Name">
+            <input name="firstname" type="text" placeholder="First Name">
 
 			<label>Last Name</label>
-            <input id="lastname" type="text" placeholder="Last Name">
+            <input name="lastname" type="text" placeholder="Last Name">
 
 			<label>Date of Birth</label>
-            <input id="dob" type="text" placeholder="2017-08-02">
+            <input name="dob" type="text" placeholder="2017-08-02">
 
 			<label>Username</label>
-            <input id="username" type="text" placeholder="Username">
+            <input name="username" type="text" placeholder="Username">
 
 			<label>Password</label>
-            <input id="password" type="password" placeholder="Password">
+            <input name="password" type="password" placeholder="Password">
 
 			<label>Contact Number</label>
-            <input id="phoneNumber" type="text" placeholder="Contact Number">
+            <input name="phoneNumber" type="text" placeholder="Contact Number">
 
 			<label>Street Address</label>
-            <input id="address" type="text" placeholder="Street Address">
+            <input name="address" type="text" placeholder="Street Address">
 
 			<label>City</label>
-            <input id="city" type="text" placeholder="City">
+            <input name="city" type="text" placeholder="City">
 
 			<label>Post Code</label>
-            <input id="postCode" type="text" placeholder="Post Code">
+            <input name="postCode" type="text" placeholder="Post Code">
 
 			<label>Email</label>
-            <input id="email" type="text" placeholder="Email">
+            <input name="email" type="text" placeholder="Email">
 
-            <input type="button" id="submit" onclick="createStaffFunction()" value="Create Staff">
+            <label>Access level</label>
+            <input name="access" type="text" placeholder="Access">
+
+            <input type="submit" value="Create Pet">
         </form>
     </div>
 <div class="whitespace"> </div>
