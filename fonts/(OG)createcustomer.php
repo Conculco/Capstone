@@ -19,7 +19,7 @@ session_start();
 
 
 
-    <title>Lovely Pets</title>
+    <title>Lovey Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
@@ -34,22 +34,21 @@ session_start();
     <div class="center">
         <form name="form" id="form" onsubmit="return validateForm()">
             <label>First Name</label>
-            <input id="firstname" type="text" required placeholder="First Name">
+            <input id="firstname" type="text" placeholder="First Name">
 
 			<label>Last Name</label>
-            <input id="lastname" type="text" required placeholder="Last Name">
+            <input id="lastname" type="text" placeholder="Last Name">
 
 			<label>Emergency Contact Number</label>
-            <input id="emergencyContact" type="text" required placeholder="Contact Number">
+            <input id="emergencyContact" type="text" placeholder="Contact Number">
 
 			<label>Street Address</label>
-            <input id="address" type="text" required placeholder="Street Address">
+            <input id="address" type="text" placeholder="Street Address">
 
 			<label>Email</label>
-            <input id="email" type="email" required placeholder="Email">
+            <input id="email" type="text" placeholder="Email">
 
             <input type="submit" value="Create Customer">
-        
         </form>
     </div>
 <div class="whitespace"> </div>
