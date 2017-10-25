@@ -6,9 +6,10 @@ include("./configsqli.php");
 <html>
 
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="img/favicon.ico"/>
 </head>
 
 <body>

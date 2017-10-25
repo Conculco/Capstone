@@ -9,9 +9,10 @@ session_start();
     <meta name="description" content="Enterprise solution for Pet Clinics">
     <meta name="author" content="Lovely Pets">
     <title>Lovely Pets | Welcome</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<style> 
+<style>
 p.small {
     line-height: 0.5;
 }
@@ -19,7 +20,7 @@ p.small {
 p.big {
     line-height: 5.0;
 }
-</style> 
+</style>
 <body>
 <header>
     <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
@@ -61,15 +62,15 @@ p.big {
 
 <h1> Veterinary Services available include: </h1>
 
-<p class= "small"> 
+<p class= "small">
 <ul>
     <li> Health checks & Vaccinations </li>
     <li> Soft tissue & Orthopaedic surgery </li>
     <li> Dentistry </li>
     <li> X-ray/Radiology </li>
     <li> Microchipping & Desexing </li>
-</ul> 
-    
+</ul>
+
 
 
 

@@ -11,6 +11,7 @@ include 'configsqli.php';
 
 <head>
     <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <!-- Minified JS library -->
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

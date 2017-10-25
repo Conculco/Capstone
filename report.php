@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Enterprise solution for Pet Clinics">
     <meta name="author" content="Lovely Pets">
-    <title>Lovely Pets | Welcome</title>
+    <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
