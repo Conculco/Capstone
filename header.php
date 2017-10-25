@@ -7,7 +7,6 @@ include 'access_control.php';
     <div id="branding">
         <h1>Lovely <span class="highlight">Pets</span></h1>
     </div>
-
     <nav>
         <ul>
             <?php
