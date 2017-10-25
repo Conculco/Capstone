@@ -24,9 +24,30 @@ p.big {
 }
 </style>
 <body>
+<<<<<<< HEAD
 <?php
 include 'header.php';
 ?>
+=======
+<header>
+    <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
+    </div>
+    <div id="branding">
+        <h1>Lovely <span class="highlight">Pets</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li class="current"><a href="index.php">Home</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
+            <li><a href="FindaVet.php">Find a Vet</a></li>
+            <li><a href="ContactUs.php">Contact Us</a></li>
+            <li><a href="services.php">Services</a></li>
+
+        </ul>
+    </nav>
+</header>
+>>>>>>> master
 
 <h1 class= "big"> Your Lovely Pets' Team </h1>
 <p> <br/>
@@ -54,7 +75,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 
 <p> <br/>
 
+<<<<<<< HEAD
+<div> 
+=======
 <div>
+>>>>>>> master
 <img src="img/main-page.jpg" />
 </div>
 
@@ -62,7 +87,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 <p class= "small">    Head Veterinary Specialist <br/>
   <p class= "small">  Milton Lovely Pets Clinic <br/>
 
+<<<<<<< HEAD
+<div> 
+=======
 <div>
+>>>>>>> master
 <img src="img/vet2.jpg" />
 </div>
 
@@ -72,7 +101,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
   <p class= "small">  Macgregor Lovely Pets Clinic <br/>
 
 
+<<<<<<< HEAD
+<div> 
+=======
 <div>
+>>>>>>> master
 <img src="img/vet3.jpg" />
 </div>
 
@@ -81,7 +114,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 <p class= "small">    Head Veterinary Specialist <br/>
   <p class= "small">  Newmarket Lovely Pets Clinic <br/>
 
+<<<<<<< HEAD
+<div> 
+=======
 <div>
+>>>>>>> master
 <img src="img/vet4.jpg" />
 </div>
 
