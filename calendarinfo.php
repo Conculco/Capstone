@@ -45,6 +45,9 @@ $bookingTypeArray = array(
 <body>
   <div class="whitespace"> </div>
     <div class="center">
+      <form action="create/cancelbooking.php?"method="post">
+        <input type="hidden" name="date" value="<?php echo $date; ?>"/>
+        <input type="hidden" name="timeSlot" value="<?php echo $timeSlot; ?>"/>
       <p><b>Customer Name</b>: <?php   $sql = "SELECT t1.firstname, t1.lastname FROM Customer as t1 LEFT JOIN Pet as t2 ON t1.customer_id = t2.customer_id LEFT JOIN Booking as t3 ON t2.pet_id = t3.pet_id WHERE t3.timeSlot = $timeSlot AND t3.date = '$date'";
       $result = $conn->query($sql);
       while ($row = $result->fetch_assoc()) {
@@ -65,6 +68,8 @@ $bookingTypeArray = array(
         $arrayval = $row["bookingType"];
         echo $bookingTypeArray[$arrayval];
       }?>
+
+      <input type="submit" name="submit" onclick="return confirm('Are you sure?')" value="Cancel">
 
 </div>
 <div class="whitespace"> </div>
