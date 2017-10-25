@@ -1,7 +1,5 @@
-
 <?php
 session_start();
-
 ?>
 <?php
 include 'configsqli.php';
@@ -38,26 +36,24 @@ include 'configsqli.php';
     include 'header.php';
 ?>
   <div class="whitespace"> </div>
-<script>
-  $( function datepicking() {
-$("#date").datepicker({
-    dateFormat: 'yy-mm-dd'
-});
-});
+    <div class="center">
+      <p>Customer Name: ………..</p>
 
-  </script>
-  <div class="center">
-    <form action="create/datepick.php" method="post">
-        <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
-    <label>Date</label>
-      <input type="text" name="date" id="date" onchange ="javascript:changeDate();" readonly>
-            <input type='submit' value="Continue">
-        </form>
-        <div id="divResult">
-        </div>
+          <p>Pet Name: ………………..</p>
+
+  <p>Pet Type: ………………….</p>
+
+  <p>  Booking Type: …………………..</p>
+
+    <p>Booking Time: <?php echo $_GET['date']?></p>
+
+    <p>Has been confirmed.</p>
+
+    <p>A confirmation has been sent.</p>
+
+  	  <p>	Print this confirmation 	</p> 			Return to Home Page </p>
 </div>
-
-
+<div class="whitespace"> </div>
 <?php
     include 'footer.php';
 ?>

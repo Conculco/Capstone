@@ -1,5 +1,7 @@
 <?php
 session_start();
+$pet_id = $_GET['pet_id'];
+#echo $pet_id;
 ?>
 <?php
 include 'configsqli.php';
@@ -8,7 +10,7 @@ include 'configsqli.php';
 <html>
 
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
     <!-- Minified JS library -->
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -34,10 +36,10 @@ include 'configsqli.php';
 <?php
     include 'header.php';
 ?>
-
+<div class="whitespace"> </div>
     <div class="center">
         <form action="create/createbooking.php" method="post">
-            <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
+          <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
             <input name="clinic_id" type="hidden" value="1">
             <label>Booking Type</label>
               <select id="bookingType" name="bookingType">
@@ -73,7 +75,7 @@ include 'configsqli.php';
                 $rows = array();
 
                 $today = $_GET['date'];
-                echo $today;
+              #  echo $today;
 
                 echo "<table style=width:10% border=1>";
                 echo "<tr><td><b>";
@@ -107,7 +109,7 @@ include 'configsqli.php';
         <div id="divResult">
         </div>
 </div>
-
+<div class="whitespace"> </div>
 
 <?php
     include 'footer.php';

@@ -11,9 +11,10 @@ try {
         "date" => $_POST['date'],
         "timeSlot" => $_POST['timeSlot'],
     ));
-    $id = $_POST['pet_id'];
     $date = $_POST['date'];
-    header("Location: ../calendar2.php?date=$date");
+    $pet_id = $_POST['pet_id'];
+    #echo $pet_id;
+    header("Location: ../bookingconfirm.php?date=$date&pet_id=$pet_id");
     die();
 }
 catch(PDOException $e) {

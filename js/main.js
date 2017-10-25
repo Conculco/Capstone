@@ -23,6 +23,31 @@ alert(html);
 return false;
 }
 
+function bookingFunction() {
+var pet_id = document.getElementById("pet_id").value;
+var clinic_id = document.getElementById("clinic_id").value;
+var bookingType = document.getElementById("bookingType").value;
+var date = document.getElementById("date").value;
+var timeSlot = document.getElementById("timeSlot").value;
+// Returns successful data submission message when the entered information is stored in database.
+var dataString = 'pet_id1=' + pet_id + '&clinic_id1=' + clinic_id + '&bookingType1=' + bookingType + '&date1=' + date + '&timeSlot1=' + timeSlot;
+if (pet_id == '' || clinic_id == '' || bookingType == '' || date == '' || timeSlot == '') {
+alert("Please Fill All Fields");
+} else {
+// AJAX code to submit form.
+$.ajax({
+type: "POST",
+url: "create/createbooking.php",
+data: dataString,
+cache: false,
+success: function(html) {
+alert(html);
+}
+});
+}
+return false;
+}
+
 function customerCreateFunction() {
 var firstname = document.getElementById("firstname").value;
 var lastname = document.getElementById("lastname").value;
