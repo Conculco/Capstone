@@ -78,7 +78,7 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
   <p class= "small">  Milton Lovely Pets Clinic <br/>
 
 <div>
-<img src="vet2.jpg" />
+<img src="img/vet2.jpg" />
 </div>
 
 
@@ -88,7 +88,7 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 
 
 <div>
-<img src="vet3.jpg" />
+<img src="img/vet3.jpg" />
 </div>
 
 
@@ -97,7 +97,7 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
   <p class= "small">  Newmarket Lovely Pets Clinic <br/>
 
 <div>
-<img src="vet4.jpg" />
+<img src="img/vet4.jpg" />
 </div>
 
 <p class= "small"> <b> Dr. Spencer Katsofros <br/>
