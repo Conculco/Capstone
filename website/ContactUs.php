@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-    <div class="Logo"><a href="index_2.php"><img src="img/logo.png" width="100" height="50"></a>
+    <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
     </div>
     <div id="branding">
         <h1>Lovely <span class="highlight">Pets</span></h1>
@@ -18,7 +18,7 @@
 
     <nav>
         <ul>
-            <li class="current"><a href="index_main.php">Home</a></li>
+            <li class="current"><a href="index.php">Home</a></li>
             <li><a href="aboutus.php">About Us</a></li>
             <li><a href="findavet.php">Find a Vet</a></li>
             <li><a href="ContactUs.php">Contact Us</a></li>
