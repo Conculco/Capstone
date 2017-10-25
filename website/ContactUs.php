@@ -11,10 +11,7 @@
 </head>
 
 <style>
-.content {
-    max-width: 500px;
-    margin: auto;
-}
+
 </style>
 
 <body>
@@ -39,7 +36,7 @@
 
 <h1> Contact Us </h1>
 
-<p>
+<p class= "indented">
 
 Lovely Pets Veterinary has multiple branches spread accross Queensland.
 

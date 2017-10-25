@@ -51,7 +51,7 @@ session_start();
         // output data of each row
         echo "<form action='' method='post'>";
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Pet Name</th><th>Date of Birth</th><th>Sex</th><th>Species</th><th>Breed</th><th>Description</th><th>Microchip ID</th><th>Booking</th><th>Edit Details</th></tr>";
+        echo "<tr><th>Pet Name</th><th>Date of Birth</th><th>Sex</th><th>Species</th><th>Breed</th><th>Description</th><th>Microchip ID</th><th>Booking Pet</th><th>Edit Pet</th><th>Delete Pet</th></tr>";
         while($row = $result->fetch_assoc()) {
             $pet_id = $row["pet_id"];
             $customer_id = $row["customer_id"];
@@ -72,7 +72,8 @@ session_start();
                 "<td>" . $row["description"] . "</td>".
                 "<td>" . $row["microchip_id"] . "</td>".
                 "<td>" . "<button type=\"submit\" formaction=\"selectdate.php?pet_id=$pet_id\">Booking</button>" . "</td>".
-                "<td>" . "<button type=\"submit\" formaction=\"petedit.php?pet_id=$pet_id&customer_id=$customer_id&petname=$petname&dob=$dob&sex=$sex&species=$species&breed=$breed&description=$description&microchip_id=$microchip_id\">Edit Details</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"petedit.php?pet_id=$pet_id&customer_id=$customer_id&petname=$petname&dob=$dob&sex=$sex&species=$species&breed=$breed&description=$description&microchip_id=$microchip_id\">Edit</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"petprompt.php?pet_id=$pet_id&customer_id=$customer_id&petname=$petname&dob=$dob&sex=$sex&species=$species&breed=$breed&description=$description&microchip_id=$microchip_id\">Delete</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";

@@ -26,10 +26,7 @@ p.big {
     margin: auto;
 }
 
-.content {
-    max-width: 500px;
-    margin: auto;
-}
+
 </style>
 <body>
 <header>

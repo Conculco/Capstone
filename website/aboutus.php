@@ -25,93 +25,80 @@ p.big {
     line-height: 5.0;
 }
 
-.content {
-    max-width: 500px;
-    margin: auto;
-}
+.indented {   padding-left: 50pt;   padding-right: 50pt; }
 </style>
-<body>
+<body> 
+
+
+
+
 <?php
 include 'header.php';
 ?>
 
-<h1 class= "big"> Your Lovely Pets' Team </h1>
-<p> <br/>
+<h1> Your Lovely Pets' Team </h1>
+<p>
 
-<font size= "4">
+<font size= "4"> <font color="353231">
 
-<p class= "small">
-Diagnosis is the foundation of veterinary medicine. It is absolutely essential that we know exactly </p>
+<p class= "indented">
+Diagnosis is the foundation of veterinary medicine. It is absolutely essential that we know exactly <br>
 
-<p class= "small"> what is wrong with your pet, as it is only then that accurate and meaningful decisions can be made </p>
+what is wrong with your pet, as it is only then that accurate and meaningful decisions can be made <br>
 
-<p class= "small"> about the treatment and management of a problem.
+about the treatment and management of a problem.
+</p>
+
+<p>
+
+<p class= "indented">
+Our commitment at Lovely Pets Veterinary is that we will do everything possible to arrive at an accurate, <br>
+
+
+ precise and confirmed diagnosis so that owners can make informed decisions that maximise <br>
+
+ the wellbeing, welfare and functionality of their pet. <br>
 </p>
 
 <p> <br/>
 
-<p class= "small">
-Our commitment at Lovely Pets Veterinary is that we will do everything possible to arrive at an accurate, </p>
-
-
- <p class= "small"> precise and confirmed diagnosis so that owners can make informed decisions that maximise </p>
-
- <p class= "small">the wellbeing, welfare and functionality of their pet.
-</p>
-
-<p> <br/>
-
-<<<<<<< HEAD
-<div> 
-=======
 <div>
->>>>>>> master
-<img src="img/main-page.jpg" />
+
+<hr>
+
+<div align=left>
+
+<p class= "indented"> <b> Dr. Michelle Watkins <br/>
+ Head Veterinary Specialist <br/>
+Milton Lovely Pets Clinic <br/>
+
+
+<img src="img/rszmain-page.jpg" />
 </div>
 
-<p class= "small"> <b> Dr. Michelle Watkins <br/>
-<p class= "small">    Head Veterinary Specialist <br/>
-  <p class= "small">  Milton Lovely Pets Clinic <br/>
+<hr>
 
-<<<<<<< HEAD
-<div> 
-=======
-<div>
->>>>>>> master
-<img src="img/vet2.jpg" />
+<div align=left>
+
+<p class= "indented"> <b> Dr. Jordan Yann <br/>
+Head Veterinary Specialist <br/>
+Newmarket Lovely Pets Clinic <br/>
+
+<img src="img/rszvet3.jpg" />
 </div>
 
+<hr>
 
-<p class= "small"> <b> Dr. Natalie Judge <br/>
-<p class= "small">    Head Veterinary Specialist <br/>
-  <p class= "small">  Macgregor Lovely Pets Clinic <br/>
+<div align=left>
+<p class= "indented"> <b> Dr. Spencer Katsofros <br/>
+Head Veterinary Specialist <br/>
+Inala Lovely Pets Clinic <br/>
 
+<img src="img/rszvet4.jpg" />
 
-<<<<<<< HEAD
-<div> 
-=======
-<div>
->>>>>>> master
-<img src="img/vet3.jpg" />
+<hr>
+
 </div>
-
-
-<p class= "small"> <b> Dr. Jordan Yann <br/>
-<p class= "small">    Head Veterinary Specialist <br/>
-  <p class= "small">  Newmarket Lovely Pets Clinic <br/>
-
-<<<<<<< HEAD
-<div> 
-=======
-<div>
->>>>>>> master
-<img src="img/vet4.jpg" />
-</div>
-
-<p class= "small"> <b> Dr. Spencer Katsofros <br/>
-<p class= "small">    Head Veterinary Specialist <br/>
-  <p class= "small">  Inala Lovely Pets Clinic <br/>
-
 
 
 <?php
