@@ -15,7 +15,7 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form action="create/petscript.php" method="post">
+        <form action="create/customerscript.php" method="post">
             <label>First Name</label>
             <input id="firstname" type="text" required placeholder="First Name">
 
