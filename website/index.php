@@ -21,50 +21,45 @@ p.big {
     line-height: 5.0;
 }
 
-.content {
-    max-width: 500px;
-    margin: auto;
-}
+.indented {   padding-left: 50pt;   padding-right: 50pt; }
 
 </style>
 
 <body>
-<?php
-include 'header.php';
-?>
+    <?php
+    include 'header.php';
+    ?>
 
-<h1> Welcome to Lovely Pets Veterinary  </h1>
+    <h1> Welcome to Lovely Pets Veterinary  </h1>
 
-<font size= "4">
+    <font size= "4">
 
-<p class= "big"> <font color="353231"> Exceptional Care for you pets.</font><br/>
-
-
-<p class= "small"><font color="353231">  Our team at Lovely Pets Veterinary are ‘passionate about pets’ and love what we do. </font><p/>
-<p class= "small"> <font color="353231"> We understand and value the bond between you and your pet, and we are committed </font><br/>
-
- <p class= "small"> <font color="353231"> to offering exceptional service, and the very best in veterinary medicine.</font> <br/>
-
-<p> <br/>
+        <p class= "indented"> <font color="353231"> <i> <font size = 5> 
+        Exceptional Care for you pets.
+    </font><br/> </i>
 
 
-<p class= "small"><font color="353231">  All Lovely Pets practices offer a comprehensive array of professional veterinary services
+            <p class= "indented"><font color="353231">  Our team at Lovely Pets Veterinary are ‘passionate about pets’ and love what we do. <br>
+                We understand and value the bond between you and your pet, and we are committed <br>
+                   to offering exceptional service, and the very best in veterinary medicine.</font> <br/>
 
-<p class= "small"><font color="353231">  to cater for all your pet care needs utilising the latest diagnostic equipment. </font><br/>
+                    <p> 
+                        <p class= "indented"><font color="353231">  All Lovely Pets practices offer a comprehensive array of professional veterinary services <br>
 
-
-
-<<<<<<< HEAD
-<div> 
-=======
-<div>
->>>>>>> master
-<img src="img/home.jpg" />
-</div>
+                             to cater for all your pet care needs utilising the latest diagnostic equipment. </font><br/>
 
 
-<?php
-    include 'footer.php';
-?>
-  </body>
-</html>
+
+                              
+                                <div> 
+                                    
+                                    <div class= "indented">
+                                        <img src="img/home.jpg" />
+                                    </div>
+
+
+                                    <?php
+                                    include 'footer.php';
+                                    ?>
+                                </body>
+                                </html>

@@ -12,20 +12,7 @@ session_start();
     <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<style>
-p.small {
-    line-height: 0.5;
-}
 
-p.big {
-    line-height: 5.0;
-}
-
-.content {
-    max-width: 500px;
-    margin: auto;
-}
-</style>
 <body>
 <?php
 include 'header.php';
@@ -33,34 +20,34 @@ include 'header.php';
 
 <h1> Services </h1>
 
-<font size= "4">
+<p class= "indented"> <font color="353231"> <font size= "4">
 
-<p class= "small"> Our team of nurses is willing to assist you with parasite control and nurtitional advice. <br/>
+Our team of nurses is willing to assist you with parasite control and nurtitional advice. <br/>
 
-<p class= "small"> The nursing team can also provide:<br/>
+The nursing team can also provide:<br/>
 
-
-<ul>
     <li> Clipping & grooming </li>
     <li> Hydrobaths </li>
     <li> Nutritional advice </li>
     <li> Free parasite checks </li>
     <li> Free weight management consultations </li>
-</ul>
 
 </br>
-
+</font></font>
+</p>
 
 <h1> Veterinary Services available include: </h1>
 
-<p class= "small">
-<ul>
+<font color="353231"><font size= "4">
+    <p class= "indented">
+
     <li> Health checks & Vaccinations </li>
     <li> Soft tissue & Orthopaedic surgery </li>
     <li> Dentistry </li>
     <li> X-ray/Radiology </li>
     <li> Microchipping & Desexing </li>
-</ul>
+</font></font>
+</p>
 
 
 
