@@ -43,6 +43,9 @@ include("./configsqli.php");
             $url = $row["customer_id"];
             $firstname = $row['firstname'];
             $lastname = $row['lastname'];
+            $address = $row['address'];
+            $email = $row['email'];
+            $emergencyContact = $row['emergencyContact'];
             echo "<tr>" .
                 "<td>" . $row["emergencyContact"] . "</td>" .
                 "<td>" . $row["firstname"] . "</td>".
@@ -50,7 +53,7 @@ include("./configsqli.php");
                 "<td>" . $row["address"] . "</td>".
                 "<td>" . $row["email"] . "</td>".
                 "<td>" . "<button type=\"submit\" formaction=\"customer.php?id=$url\">Select</button>" . "</td>".
-                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&firstname=$firstname&lastname=$lastname\">Edit Details</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&emergencyContact=$emergencyContact&firstname=$firstname&lastname=$lastname&address=$address&email=$email\">Edit Details</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";
