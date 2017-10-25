@@ -60,7 +60,7 @@ session_start();
                 "<td>" . $row["breed"] . "</td>".
                 "<td>" . $row["description"] . "</td>".
                 "<td>" . $row["microchip_id"] . "</td>".
-                "<td>" . "<button type=\"submit\" formaction=\"createbooking.php?pet_id=$pet_id\">Booking</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"selectdate.php?pet_id=$pet_id\">Booking</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";

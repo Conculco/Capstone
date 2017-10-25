@@ -32,8 +32,8 @@ include 'configsqli.php';
     <?php
     $rows = array();
 
-    $today = date("Y-m-d");
-    $date = date("Y-m-d", strtotime(' + 1 days'));
+    $today = $_GET['date'];
+    $date = $_GET['date'];
     echo $date;
 
 

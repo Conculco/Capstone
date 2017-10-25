@@ -34,15 +34,7 @@ include 'configsqli.php';
 <?php
     include 'header.php';
 ?>
-<script>
 
-  $( function datepicking() {
-$("#date").datepicker({
-    dateFormat: 'yy-mm-dd'
-});
-});
-
-  </script>
     <div class="center">
         <form action="create/createbooking.php" method="post">
             <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
@@ -56,9 +48,8 @@ $("#date").datepicker({
                 <option value="4">Microchip</option>
                 <option value="5">Other</option>
               </select>
-            <label>Date</label>
-            <input type="text" name="date" id="date" onchange ="javascript:changeDate();" readonly>
-            <lebel>Time Slot</label>
+            <input type="hidden" name="date" id="date" value="<?php echo $_GET['date'];?>" readonly>
+            <label>Time Slot</label>
               <select id="timeSlot" name="timeSlot">
                 <option value=""></option>
                 <?php
@@ -81,8 +72,8 @@ $("#date").datepicker({
                 ,'16:30 - 17:00');
                 $rows = array();
 
-                $today = $_POST['date'];
-                echo 'date';
+                $today = $_GET['date'];
+                echo $today;
 
                 echo "<table style=width:10% border=1>";
                 echo "<tr><td><b>";
