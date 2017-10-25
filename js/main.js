@@ -79,23 +79,6 @@ alert(html);
 return false;
 }
 
-$("#datepicker").datepicker().change(function() {
-  	var $this = $(this);
-    var data = {
-      json: JSON.stringify({
-        array: [ {id: 1,text: "8 AM - 10 AM"} , {id: 2,text: "10 AM - 12 AM"} ]
-      }),
-      delay: 0
-    };
-    $.ajax({
-      url:"/echo/json/",
-      data:data,
-      type:"POST",
-      success:function(response) {
-        checkin(response);
-      }
-    });
-  });
 function checkin(data) {
   var content = "";
   for (var arr=data.array, idx=0; idx < arr.length; idx++) {
