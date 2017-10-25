@@ -36,7 +36,7 @@ include 'header.php';
         <input name="species" type="text" required placeholder="Cat/Dog">
 
         <label>Breed</label>
-        <input name="breed" type="text" placeholder="">
+        <input name="breed" type="text" required placeholder="">
 
         <label>Description</label>
         <input name="description" type="text" required placeholder="description">
