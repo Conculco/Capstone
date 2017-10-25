@@ -27,9 +27,15 @@ session_start();
     <div>
     <p><strong>ID:</strong> <?php echo $id; ?></p>
 
+    <strong>Emergency Contact: *</strong> <input type="text" name="emergencyContact" value="<?php echo $_GET['emergencyContact']?>"/><br/>
+
     <strong>First Name: *</strong> <input type="text" name="firstname" value="<?php echo $_GET['firstname'];?>"/><br/>
 
     <strong>Last Name: *</strong> <input type="text" name="lastname" value="<?php echo $_GET['lastname']?>"/><br/>
+
+    <strong>Address: *</strong> <input type="text" name="address" value="<?php echo $_GET['address']?>"/><br/>
+
+    <strong>Email: *</strong> <input type="text" name="email" value="<?php echo $_GET['email']?>"/><br/>
 
     <p>* Required</p>
 
@@ -41,6 +47,7 @@ session_start();
 
 
 <div class="whitespace"> </div>
+</div>
 <?php
     include 'footer.php';
 ?>

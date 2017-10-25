@@ -20,7 +20,7 @@ include("./configsqli.php");
     <div class="center">
         <form action="./searchcustomer.php" method="post">
             <label>Find Customer</label>
-            <input name="searchinput" type="text" placeholder="Enter Customer Name...">
+            <input name="searchinput" type="text" required placeholder="Enter Customer Name...">
             <input type="submit" value="Search">
         </form>
     </div>
@@ -37,12 +37,15 @@ include("./configsqli.php");
     if ($result->num_rows > 0) {
         // output data of each row
         echo "<form action='' method='post'>";
-        echo "<table class=\"table\" align=\"center\">";
-        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th><th>Edit</th></tr>";
+        echo "<table style=\"width:60%\" class=\"table\" align=\"center\">";
+        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th><th>Edit</th><th>Delete</th></tr>";
         while($row = $result->fetch_assoc()) {
             $url = $row["customer_id"];
             $firstname = $row['firstname'];
             $lastname = $row['lastname'];
+            $address = $row['address'];
+            $email = $row['email'];
+            $emergencyContact = $row['emergencyContact'];
             echo "<tr>" .
                 "<td>" . $row["emergencyContact"] . "</td>" .
                 "<td>" . $row["firstname"] . "</td>".
@@ -50,7 +53,8 @@ include("./configsqli.php");
                 "<td>" . $row["address"] . "</td>".
                 "<td>" . $row["email"] . "</td>".
                 "<td>" . "<button type=\"submit\" formaction=\"customer.php?id=$url\">Select</button>" . "</td>".
-                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&firstname=$firstname&lastname=$lastname\">Edit Details</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&emergencyContact=$emergencyContact&firstname=$firstname&lastname=$lastname&address=$address&email=$email\">Edit</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customerprompt.php?id=$url&firstname=$firstname&lastname=$lastname\">Delete</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";

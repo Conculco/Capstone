@@ -51,9 +51,18 @@ session_start();
         // output data of each row
         echo "<form action='' method='post'>";
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Pet Name</th><th>Date of Birth</th><th>Sex</th><th>Species</th><th>Breed</th><th>Description</th><th>Microchip ID</th></tr>";
+        echo "<tr><th>Pet Name</th><th>Date of Birth</th><th>Sex</th><th>Species</th><th>Breed</th><th>Description</th><th>Microchip ID</th><th>Booking Pet</th><th>Edit Pet</th><th>Delete Pet</th></tr>";
         while($row = $result->fetch_assoc()) {
             $pet_id = $row["pet_id"];
+            $customer_id = $row["customer_id"];
+            $petname = $row["petname"];
+            $dob = $row["dob"];
+            $sex = $row["sex"];
+            $species = $row["species"];
+            $breed = $row["breed"];
+            $description = $row["description"];
+            $microchip_id = $row["microchip_id"];
+
             echo "<tr>" .
                 "<td>" . $row["petname"] . "</td>".
                 "<td>" . $row["dob"] . "</td>".
@@ -63,6 +72,8 @@ session_start();
                 "<td>" . $row["description"] . "</td>".
                 "<td>" . $row["microchip_id"] . "</td>".
                 "<td>" . "<button type=\"submit\" formaction=\"selectdate.php?pet_id=$pet_id\">Booking</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"petedit.php?pet_id=$pet_id&customer_id=$customer_id&petname=$petname&dob=$dob&sex=$sex&species=$species&breed=$breed&description=$description&microchip_id=$microchip_id\">Edit</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"petprompt.php?pet_id=$pet_id&customer_id=$customer_id&petname=$petname&dob=$dob&sex=$sex&species=$species&breed=$breed&description=$description&microchip_id=$microchip_id\">Delete</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";
@@ -70,6 +81,26 @@ session_start();
     } else {
         echo "0 results";
     }
+echo "<h1>Invoice</h1>";
+$sql = "SELECT * FROM Invoice INNER JOIN Pet ON Invoice.pet_id = Pet.pet_id Where Invoice.customer_id = $id";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    echo "<table style='border: solid 1px black;'>";
+    echo "<tr><th>Invoice ID</th><th>Pet Name</th><th>Paid</th></tr>";
+    while($row = $result->fetch_assoc()) {
+        $url = $row["invoice_id"];
+        echo "<tr>" .
+            "<td>" . $row["invoice_id"] . "</td>" .
+            "<td>" . $row["petname"] . "</td>".
+            "<td>" . $row["paid"] . "</td>".
+            "<td>" . "<button type=\"submit\" formaction=\"invoice.php?invoice_id=$url\">Invoice Details</button>" . "</td>".
+            "</tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
 
 ?>
 </div>

@@ -213,7 +213,13 @@ a:active {
   border: 4px solid #e8491d;
   padding: 20px;
 }
-
+.center-wide {
+  margin: auto;
+  width: 50%;
+  border-radius: 25px;
+  border: 4px solid #e8491d;
+  padding: 20px;
+}
 .center2 {
   margin: auto;
   width: 50%;

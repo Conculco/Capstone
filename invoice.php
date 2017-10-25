@@ -1,3 +1,25 @@
+<?php
+session_start();
+include("./configsqli.php");
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lovely Pets</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="img/favicon.ico"/>
+</head>
+
+<body>
+<?php
+include 'header.php';
+?>
+<div class="whitespace"> </div>
+<div class="center-wide">
+
+
 <style>
     table.fixed { table-layout:fixed; }
     table.fixed td { overflow: hidden; }
@@ -67,7 +89,7 @@ if ($result->num_rows > 0) {
 ?>
 
 
-<table style="width:50%" align="center" class="fixed">
+<table style="width:95%" align="center" class="fixed">
     <tr>
         <th>Lovey Pets</th>
     </tr>
@@ -88,12 +110,14 @@ if ($result->num_rows > 0) {
         <td>Doctor:</td>
     </tr>
 </table>
-<table style="width:50%" align="center" class="fixed">
+    <div class="whitespace"> </div>
+    <div class="whitespace"> </div>
+<table style="width:95%" align="center" class="fixed">
     <tr>
         <td><b><u>Tax Invoice for Professional Services</u></b></td>
     </tr>
 </table>
-<table style="width:50%" align="center" class="fixed">
+<table style="width:95%" align="center" class="fixed">
     <tr>
         <td><b>Service</b></td>
         <td><b>QTY</b></td>
@@ -127,7 +151,7 @@ if ($result->num_rows > 0) {
     <tr>
         <td></td>
         <td>Includes GST:</td>
-        <td>$<?php echo $total/10; ?></td>
+        <td>$<?php echo round($total/11,2); ?></td>
     </tr>
     <tr>
         <td></td>
@@ -140,14 +164,17 @@ if ($result->num_rows > 0) {
         <td>$<?php echo $total - $paid; ?></td>
     </tr>
 </table>
-<table style="width:50%" align="center" class="fixed">
+
+    <div class="whitespace"> </div>
+    <div class="whitespace"> </div>
+<table style="width:95%" align="center" class="fixed">
     <tr>
         <td></td>
-        <td><?php echo $clinic_name; ?></td>
+        <td>Store: <?php echo $clinic_name; ?></td>
     </tr>
     <tr>
         <td></td>
-        <td><?php echo $clinic_address; ?></td>
+        <td>Address: <?php echo $clinic_address; ?></td>
     </tr>
     <tr>
         <td></td>
@@ -158,3 +185,5 @@ if ($result->num_rows > 0) {
         <td>Email: <?php echo $clinic_email; ?></td>
     </tr>
 </table>
+</div>
+</div>
