@@ -17,22 +17,21 @@ session_start();
     <div class="center">
         <form action="create/customerscript.php" method="post">
             <label>First Name</label>
-            <input id="firstname" type="text" required placeholder="First Name">
+            <input name="firstname" type="text" required placeholder="First Name">
 
 			<label>Last Name</label>
-            <input id="lastname" type="text" required placeholder="Last Name">
+            <input name="lastname" type="text" required placeholder="Last Name">
 
 			<label>Emergency Contact Number</label>
-            <input id="emergencyContact" type="text" required placeholder="Contact Number">
+            <input name="emergencyContact" type="text" required placeholder="Contact Number">
 
 			<label>Street Address</label>
-            <input id="address" type="text" required placeholder="Street Address">
+            <input name="address" type="text" required placeholder="Street Address">
 
 			<label>Email</label>
-            <input id="email" type="email" required placeholder="Email">
+            <input name="email" type="email" required placeholder="Email">
 
             <input type="submit" value="Create Customer">
-        
         </form>
     </div>
 <div class="whitespace"> </div>
