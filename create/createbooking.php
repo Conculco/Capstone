@@ -13,8 +13,9 @@ try {
     ));
     $date = $_POST['date'];
     $pet_id = $_POST['pet_id'];
-    #echo $pet_id;
-    header("Location: ../bookingconfirm.php?date=$date&pet_id=$pet_id");
+    $bookingType = $_POST['bookingType'];
+    $timeSlot = $_POST['timeSlot'];
+    header("Location: ../bookingconfirm.php?date=$date&pet_id=$pet_id&bookingType=$bookingType&timeSlot=$timeSlot");
     die();
 }
 catch(PDOException $e) {

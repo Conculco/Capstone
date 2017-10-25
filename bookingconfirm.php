@@ -1,5 +1,8 @@
 <?php
 session_start();
+$pet_id = $_GET['pet_id'];
+$bookingType = $_GET['bookingType'];
+$timeSlot = $_GET['timeSlot'];
 ?>
 <?php
 include 'configsqli.php';
@@ -35,24 +38,66 @@ include 'configsqli.php';
 
 <?php
     include 'header.php';
+    $timeslotarray = array(
+        '9:00 - 9:30'
+    , '9:30 - 10:00'
+    , '10:00 - 10:30'
+    , '10:30 - 11:00'
+    , '11:00 - 11:30'
+    , '11:30 - 12:00'
+    , '12:00 - 12:30'
+    , '12:30 - 13:00'
+    , '13:00 - 13:30'
+    , '13:30 - 14:00'
+    , '14:00 - 14:30'
+    , '14:30 - 15:00'
+    , '15:00 - 15:30'
+    , '15:30 - 16:00'
+    , '16:00 - 16:30'
+    , '16:30 - 17:00');
+    $bookingTypeArray = array(
+      '',
+      'General Checkup',
+      'Vacinations',
+      'Desex',
+      'Microchip',
+      'Other');
 ?>
+
   <div class="whitespace"> </div>
     <div class="center">
-      <p>Customer Name: ………..</p>
+      <p><b>Customer Name</b>: <?php   $sql = "SELECT t1.firstname, t1.lastname FROM Customer as t1 LEFT JOIN Pet as t2 ON t1.customer_id = t2.customer_id LEFT JOIN Booking as t3 ON t2.pet_id = t3.pet_id = 7 WHERE t2.pet_id = 7";
+      $result = $conn->query($sql);
+      while ($row = $result->fetch_assoc()) {
+        echo $row["firstname"];
+        echo " ";
+        echo $row["lastname"]."<br>";
+      }?>
+      </p>
 
-          <p>Pet Name: ………………..</p>
+      <p><b>Pet Name</b>:
+      <?php   $sql = "SELECT petname FROM Pet Where pet_id = $pet_id";
+      $result = $conn->query($sql);
+      while ($row = $result->fetch_assoc()) {
+        echo $row["petname"]."<br>";
+      }?>
+      </p>
 
-  <p>Pet Type: ………………….</p>
+      <p><b>Pet Type</b>: <?php   $sql = "SELECT species FROM Pet Where pet_id = $pet_id";
+      $result = $conn->query($sql);
+      while ($row = $result->fetch_assoc()) {
+        echo $row["species"]."<br>";
+      }?>
+      </p>
 
-  <p>  Booking Type: …………………..</p>
+      <p><b>Booking Type</b>: <?php echo $bookingTypeArray[$_GET['bookingType']]?></p>
 
-    <p>Booking Time: <?php echo $_GET['date']?></p>
+      <p><b>Booking Time</b>: <?php echo $_GET['date']?> <?php echo ", <b>Time Slot</b>: " ?><?php echo $timeslotarray[$_GET['timeSlot']]?></p>
 
-    <p>Has been confirmed.</p>
+      <p><b>Has been confirmed.</b></p>
 
-    <p>A confirmation has been sent.</p>
+      <p>A confirmation email has been sent to the following address</p>
 
-  	  <p>	Print this confirmation 	</p> 			Return to Home Page </p>
 </div>
 <div class="whitespace"> </div>
 <?php
