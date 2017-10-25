@@ -5,26 +5,9 @@ session_start();
 <html>
 
 <head>
-
-    <script>
-        function validateForm() {
-            var x = document.forms["form"]["firstname"].value;
-            if (x == "") {
-                alert("Name must be filled out");
-                return false;
-            }
-        }
-    </script>
-
-
-
-
     <title>Lovely Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-    <script src="http://malsup.github.com/jquery.form.js"></script>
-    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -32,7 +15,7 @@ session_start();
     include 'header.php';
 ?>
     <div class="center">
-        <form name="form" id="form" onsubmit="return validateForm()">
+        <form action="create/petscript.php" method="post">
             <label>First Name</label>
             <input id="firstname" type="text" required placeholder="First Name">
 
