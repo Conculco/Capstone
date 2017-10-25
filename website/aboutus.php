@@ -32,7 +32,7 @@ p.big {
 
     <nav>
         <ul>
-            <li class="current"><a href="index_2.php">Home</a></li>
+            <li class="current"><a href="index_main.php">Home</a></li>
             <li><a href="aboutus.php">About Us</a></li>
             <li><a href="findavet.php">Find a Vet</a></li>
             <li><a href="ContactUs.php">Contact Us</a></li>
