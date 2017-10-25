@@ -6,23 +6,25 @@ include("./configsqli.php");
 <html>
 
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="img/favicon.ico"/>
 </head>
 
 <body>
 <?php
     include 'header.php';
 ?>
-
+<div class="whitespace"> </div>
     <div class="center">
         <form action="./searchcustomer.php" method="post">
-            <label>Search</label>
-            <input name="searchinput" type="text" placeholder="Search">
+            <label>Find Customer</label>
+            <input name="searchinput" type="text" placeholder="Enter Customer Name...">
             <input type="submit" value="Search">
         </form>
     </div>
+    <div class="whitespace"> </div>
     <?php
     $sql = "SELECT * FROM Customer";
     if(isset($_POST['searchinput'])){
@@ -35,7 +37,7 @@ include("./configsqli.php");
     if ($result->num_rows > 0) {
         // output data of each row
         echo "<form action='' method='post'>";
-        echo "<table align=\"center\" style='border: solid 1px black;'>";
+        echo "<table class=\"table\" align=\"center\">";
         echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th></tr>";
         while($row = $result->fetch_assoc()) {
             $url = $row["customer_id"];
@@ -54,6 +56,7 @@ include("./configsqli.php");
     }
     echo "</table>";
     ?>
+    <div class="whitespace"> </div>
 <?php
     include 'footer.php';
 ?>

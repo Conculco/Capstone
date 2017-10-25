@@ -6,6 +6,7 @@ session_start();
 
 <head>
     <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -14,6 +15,7 @@ session_start();
 <?php
     include 'header.php';
 ?>
+<div class="whitespace"> </div>
     <div class="center">
         <form action="create/customerscript.php" method="post">
             <label>First Name</label>

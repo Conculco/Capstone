@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
 </head>

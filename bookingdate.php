@@ -11,11 +11,11 @@ include 'configsqli.php';
 
 <head>
     <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <!-- Minified JS library -->
       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link rel="icon" href="img/favicon.ico"/>
       <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="js/main.js">
         $(document).ready(function () {
@@ -48,8 +48,7 @@ $("#date").datepicker({
 
   </script>
   <div class="center">
-    <form action="create/datepick.php" method="post">
-        <input name="pet_id" type="hidden" value="<?php echo $_GET['pet_id'];?>">
+    <form action="create/bookingdate.php" method="post">
     <label>Date</label>
       <input type="text" name="date" id="date" onchange ="javascript:changeDate();" readonly>
             <input type='submit' value="Continue">

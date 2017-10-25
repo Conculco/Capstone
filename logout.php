@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico"/>
     <meta http-equiv="refresh" content="5; url=login.php" />
 </head>
 <body>

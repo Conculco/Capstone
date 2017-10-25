@@ -9,9 +9,10 @@ session_start();
     <meta name="description" content="Enterprise solution for Pet Clinics">
     <meta name="author" content="Lovely Pets">
     <title>Lovely Pets | Welcome</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<style> 
+<style>
 p.small {
     line-height: 0.5;
 }
@@ -19,7 +20,7 @@ p.small {
 p.big {
     line-height: 5.0;
 }
-</style> 
+</style>
 
 <body>
 <header>
@@ -47,21 +48,25 @@ p.big {
 <p class= "big"> <font color="353231"> Exceptional Care for you pets.</font><br/>
 
 
-<p class= "small"><font color="353231">  Our team at Lovely Pets Veterinary are ‘passionate about pets’ and love what we do. </font><p/>  
-<p class= "small"> <font color="353231"> We understand and value the bond between you and your pet, and we are committed </font><br/> 
+<p class= "small"><font color="353231">  Our team at Lovely Pets Veterinary are ‘passionate about pets’ and love what we do. </font><p/>
+<p class= "small"> <font color="353231"> We understand and value the bond between you and your pet, and we are committed </font><br/>
 
  <p class= "small"> <font color="353231"> to offering exceptional service, and the very best in veterinary medicine.</font> <br/>
 
-<p> <br/> 
+<p> <br/>
 
 
-<p class= "small"><font color="353231">  All Lovely Pets practices offer a comprehensive array of professional veterinary services 
+<p class= "small"><font color="353231">  All Lovely Pets practices offer a comprehensive array of professional veterinary services
 
 <p class= "small"><font color="353231">  to cater for all your pet care needs utilising the latest diagnostic equipment. </font><br/>
 
 
 
+<<<<<<< HEAD
 <div> 
+=======
+<div>
+>>>>>>> master
 <img src="img/home.jpg" />
 </div>
 

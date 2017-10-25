@@ -10,10 +10,11 @@ session_start();
     <meta name="description" content="Enterprise solution for Pet Clinics">
     <meta name="author" content="Lovely Pets">
     <title>Lovely Pets | Welcome</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<style> 
+<style>
 p.small {
     line-height: 0.5;
 }
@@ -21,7 +22,7 @@ p.small {
 p.big {
     line-height: 5.0;
 }
-</style> 
+</style>
 <body>
 <header>
     <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
@@ -43,7 +44,7 @@ p.big {
 </header>
 
 <h1 class= "big"> Your Lovely Pets' Team </h1>
-<p> <br/> 
+<p> <br/>
 
 <font size= "4">
 
@@ -55,7 +56,7 @@ Diagnosis is the foundation of veterinary medicine. It is absolutely essential t
 <p class= "small"> about the treatment and management of a problem.
 </p>
 
-<p> <br/> 
+<p> <br/>
 
 <p class= "small">
 Our commitment at Lovely Pets Veterinary is that we will do everything possible to arrive at an accurate, </p>
@@ -63,12 +64,16 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 
  <p class= "small"> precise and confirmed diagnosis so that owners can make informed decisions that maximise </p>
 
- <p class= "small">the wellbeing, welfare and functionality of their pet. 
+ <p class= "small">the wellbeing, welfare and functionality of their pet.
 </p>
 
-<p> <br/> 
+<p> <br/>
 
+<<<<<<< HEAD
 <div> 
+=======
+<div>
+>>>>>>> master
 <img src="img/main-page.jpg" />
 </div>
 
@@ -76,7 +81,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 <p class= "small">    Head Veterinary Specialist <br/>
   <p class= "small">  Milton Lovely Pets Clinic <br/>
 
+<<<<<<< HEAD
 <div> 
+=======
+<div>
+>>>>>>> master
 <img src="img/vet2.jpg" />
 </div>
 
@@ -86,7 +95,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
   <p class= "small">  Macgregor Lovely Pets Clinic <br/>
 
 
+<<<<<<< HEAD
 <div> 
+=======
+<div>
+>>>>>>> master
 <img src="img/vet3.jpg" />
 </div>
 
@@ -95,7 +108,11 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 <p class= "small">    Head Veterinary Specialist <br/>
   <p class= "small">  Newmarket Lovely Pets Clinic <br/>
 
+<<<<<<< HEAD
 <div> 
+=======
+<div>
+>>>>>>> master
 <img src="img/vet4.jpg" />
 </div>
 

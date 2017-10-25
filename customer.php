@@ -6,7 +6,8 @@ session_start();
 <html>
 
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -15,6 +16,7 @@ session_start();
 <?php
     include 'header.php';
 ?>
+<div class="whitespace"> </div>
 <div class="center2">
 <?php
     $id = $_GET['id'];
@@ -71,7 +73,7 @@ session_start();
 
 ?>
 </div>
-
+<div class="whitespace"> </div>
 <?php
     include 'footer.php';
 ?>

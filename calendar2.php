@@ -5,7 +5,8 @@ session_start();
 <html>
 
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
 <?php
 include 'configsqli.php';
 ?>

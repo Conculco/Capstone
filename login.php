@@ -7,6 +7,7 @@ session_start();
 <head>
     <title>Lovely Pets</title>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 

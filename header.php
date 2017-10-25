@@ -5,6 +5,7 @@ include 'access_control.php';
     <div class="Logo"><a href="index.php"><img src="img/logo.png" width="100" height="50"></a>
     </div>
     <div id="branding">
+      <link rel="icon" href="img/favicon.ico"/>
         <h1>Lovely <span class="highlight">Pets</span></h1>
     </div>
     <nav>
@@ -16,11 +17,9 @@ include 'access_control.php';
             }
             ?>
             <li class="current"><a href="index.php">Home</a></li>
-            <li><a href="searchcustomer.php">Search</a></li>
-            <li><a href="createcustomer.php">Customer</a></li>
-            <li><a href="walkin.php">Walk-Ins</a></li>
-            <li><a href="reception.php">Inventory</a></li>
+            <li><a href="searchcustomer.php">Search Customers</a></li>
+            <li><a href="createcustomer.php">Create Customers</a></li>
+            <li><a href="bookingdate.php">View Bookings</a></li>
         </ul>
     </nav>
 </header>
-

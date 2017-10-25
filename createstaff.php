@@ -5,7 +5,8 @@ session_start();
 <html>
 
 <head>
-    <title>Lovey Pets</title>
+    <title>Lovely Pets</title>
+    <link rel="icon" href="img/favicon.ico"/>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
