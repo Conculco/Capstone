@@ -38,7 +38,7 @@ include("./configsqli.php");
         // output data of each row
         echo "<form action='' method='post'>";
         echo "<table style=\"width:60%\" class=\"table\" align=\"center\">";
-        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th><th>Edit</th></tr>";
+        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th><th>Edit</th><th>Delete</th></tr>";
         while($row = $result->fetch_assoc()) {
             $url = $row["customer_id"];
             $firstname = $row['firstname'];
@@ -53,7 +53,8 @@ include("./configsqli.php");
                 "<td>" . $row["address"] . "</td>".
                 "<td>" . $row["email"] . "</td>".
                 "<td>" . "<button type=\"submit\" formaction=\"customer.php?id=$url\">Select</button>" . "</td>".
-                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&emergencyContact=$emergencyContact&firstname=$firstname&lastname=$lastname&address=$address&email=$email\">Edit Details</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&emergencyContact=$emergencyContact&firstname=$firstname&lastname=$lastname&address=$address&email=$email\">Edit</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customerprompt.php?id=$url&firstname=$firstname&lastname=$lastname\">Delete</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";
