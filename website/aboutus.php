@@ -35,7 +35,7 @@ p.big {
         <ul>
             <li class="current"><a href="index.php">Home</a></li>
             <li><a href="aboutus.php">About Us</a></li>
-            <li><a href="Findavet.php">Find a Vet</a></li>
+            <li><a href="FindaVet.php">Find a Vet</a></li>
             <li><a href="ContactUs.php">Contact Us</a></li>
             <li><a href="services.php">Services</a></li>
 
