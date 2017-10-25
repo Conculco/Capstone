@@ -70,6 +70,26 @@ session_start();
     } else {
         echo "0 results";
     }
+echo "<h1>Invoice</h1>";
+$sql = "SELECT * FROM Invoice INNER JOIN Pet ON Invoice.pet_id = Pet.pet_id Where Invoice.customer_id = $id";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    echo "<table style='border: solid 1px black;'>";
+    echo "<tr><th>Invoice ID</th><th>Pet Name</th><th>Paid</th></tr>";
+    while($row = $result->fetch_assoc()) {
+        $url = $row["invoice_id"];
+        echo "<tr>" .
+            "<td>" . $row["invoice_id"] . "</td>" .
+            "<td>" . $row["petname"] . "</td>".
+            "<td>" . $row["paid"] . "</td>".
+            "<td>" . "<button type=\"submit\" formaction=\"invoice.php?invoice_id=$url\">Invoice Details</button>" . "</td>".
+            "</tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
 
 ?>
 </div>

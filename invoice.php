@@ -127,7 +127,7 @@ if ($result->num_rows > 0) {
     <tr>
         <td></td>
         <td>Includes GST:</td>
-        <td>$<?php echo $total/10; ?></td>
+        <td>$<?php echo round($total/11,2); ?></td>
     </tr>
     <tr>
         <td></td>
@@ -143,11 +143,11 @@ if ($result->num_rows > 0) {
 <table style="width:50%" align="center" class="fixed">
     <tr>
         <td></td>
-        <td><?php echo $clinic_name; ?></td>
+        <td>Store: <?php echo $clinic_name; ?></td>
     </tr>
     <tr>
         <td></td>
-        <td><?php echo $clinic_address; ?></td>
+        <td>Address: <?php echo $clinic_address; ?></td>
     </tr>
     <tr>
         <td></td>
