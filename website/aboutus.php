@@ -70,7 +70,7 @@ Our commitment at Lovely Pets Veterinary is that we will do everything possible 
 <p> <br/>
 
 <div>
-<img src="main-page.jpg" />
+<img src="img/main-page.jpg" />
 </div>
 
 <p class= "small"> <b> Dr. Michelle Watkins <br/>
