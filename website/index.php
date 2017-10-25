@@ -62,7 +62,7 @@ p.big {
 
 
 <div> 
-<img src="home.jpg" />
+<img src="img/home.jpg" />
 </div>
 
 
