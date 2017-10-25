@@ -20,7 +20,7 @@ include("./configsqli.php");
     <div class="center">
         <form action="./searchcustomer.php" method="post">
             <label>Find Customer</label>
-            <input name="searchinput" type="text" placeholder="Enter Customer Name...">
+            <input name="searchinput" type="text" required placeholder="Enter Customer Name...">
             <input type="submit" value="Search">
         </form>
     </div>
