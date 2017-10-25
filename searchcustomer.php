@@ -38,9 +38,11 @@ include("./configsqli.php");
         // output data of each row
         echo "<form action='' method='post'>";
         echo "<table class=\"table\" align=\"center\">";
-        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th></tr>";
+        echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th><th>Edit</th></tr>";
         while($row = $result->fetch_assoc()) {
             $url = $row["customer_id"];
+            $firstname = $row['firstname'];
+            $lastname = $row['lastname'];
             echo "<tr>" .
                 "<td>" . $row["emergencyContact"] . "</td>" .
                 "<td>" . $row["firstname"] . "</td>".
@@ -48,6 +50,7 @@ include("./configsqli.php");
                 "<td>" . $row["address"] . "</td>".
                 "<td>" . $row["email"] . "</td>".
                 "<td>" . "<button type=\"submit\" formaction=\"customer.php?id=$url\">Select</button>" . "</td>".
+                "<td>" . "<button type=\"submit\" formaction=\"customeredit.php?id=$url&firstname=$firstname&lastname=$lastname\">Edit Details</button>" . "</td>".
                 "</tr>";
         }
         echo "</form>";

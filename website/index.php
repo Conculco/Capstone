@@ -20,6 +20,12 @@ p.small {
 p.big {
     line-height: 5.0;
 }
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
 </style>
 
 <body>
