@@ -16,8 +16,7 @@ include 'header.php';
 ?>
 <div class="center">
     <form action="create/petscript.php" method="post">
-        <label>customer_id</label>
-        <input name="customer_id" type="text" value="<?php echo $_GET['id'];?>">
+        <input name="customer_id" type="hidden" value="<?php echo $_GET['id'];?>">
 
         <label>Pet Name</label>
         <input name="petname" type="text" placeholder="">
@@ -26,7 +25,11 @@ include 'header.php';
         <input name="dob" type="text" placeholder="">
 
         <label>Sex</label>
-        <input name="sex" type="text" placeholder="Male/Female">
+        <select name="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="n/a">N/A</option>
+        </select>
 
         <label>Species</label>
         <input name="species" type="text" placeholder="Cat/Dog">
