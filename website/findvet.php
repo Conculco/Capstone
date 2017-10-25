@@ -13,13 +13,25 @@ session_start();
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <style>
-p.small {
-    line-height: 0.5;
-}
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+        height: 100%;
+        width: 50%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    p.small {
+        line-height: 0.5;
+    }
 
-p.big {
-    line-height: 5.0;
-}
+    p.big {
+        line-height: 5.0;
+    }
 </style>
 <body>
 <?php
@@ -33,10 +45,31 @@ include 'header.php';
 
 <p class= "small"> Lovely Pets Veterinary offers exceptional client and patient care giving you peace of mind that when in our care, your pet will be treated like family.<br/>
 
-
+    <div id="map"></div>
 
 
 <p>To find your local vet enter your post code below: </p>
+    <script>
+
+        function initMap() {
+            var myLatLng = {lat: -27.45313, lng: 153.0197};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5P_KBg5jJf9BuauNsSjmSD_Ve35qm9HU&callback=initMap">
+    </script>
+
 
 
 
