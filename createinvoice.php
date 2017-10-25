@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <?php
 session_start();
+include("./configsqli.php");
 ?>
 <html>
 
@@ -15,23 +16,35 @@ session_start();
 <?php
 include 'header.php';
 ?>
+
+<?php
+$id = $_GET['id'];
+?>
 <div class="center">
     <form action="create/invoicescript.php" method="post">
-        <label>clinic_id</label>
-        <input name="clinic_id" type="text" placeholder="">
 
-        <label>customer_id</label>
-        <input name="customer_id" type="text" placeholder="">
+        <input name="clinic_id" type="hidden" value="1">
+        <input name="customer_id" type="hidden" value="<?php echo $_GET['id']?>">
+        <input name="date" type="hidden" placeholder="date">
+        <input name="paid" type="hidden" value="0">
 
-        <label>pet_id</label>
-        <input name="pet_id" type="text" placeholder="">
-
-        <label>date</label>
-        <input name="date" type="text" placeholder="date">
-
-        <label>Paid</label>
-        <input name="paid" type="text" placeholder="Paid">
-
+        <label>Pet Name</label>
+        <select name="pet_id">
+        <?php
+        $sql = "SELECT * FROM Pet WHERE customer_id = $id";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $petname = $row["petname"];
+                $pet_id = $row["pet_id"];
+                echo "<option value=\"$pet_id\">$petname</option>";
+            }
+        } else {
+            echo "0 results";
+        }
+        ?>
+        </select>
         <input type="submit" value="Create Invoice">
     </form>
 </div>

@@ -80,11 +80,14 @@ session_start();
     } else {
         echo "0 results";
     }
-echo "<h1>Invoice</h1>";
+echo "<form action='' method='post'>";
+echo "<h1>Invoice <button type=\"submit\" formaction=\"createinvoice.php?id=$id\">Create invoice</button></h1>";
+echo "</form>";
 $sql = "SELECT * FROM Invoice INNER JOIN Pet ON Invoice.pet_id = Pet.pet_id Where Invoice.customer_id = $id";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
+    echo "<form action='' method='post'>";
     echo "<table style='border: solid 1px black;'>";
     echo "<tr><th>Invoice ID</th><th>Pet Name</th><th>Paid</th></tr>";
     while($row = $result->fetch_assoc()) {
@@ -93,9 +96,12 @@ if ($result->num_rows > 0) {
             "<td>" . $row["invoice_id"] . "</td>" .
             "<td>" . $row["petname"] . "</td>".
             "<td>" . $row["paid"] . "</td>".
+            "<td>" . "<button type=\"submit\" formaction=\"addinvoice.php?invoice_id=$url&customer_id=$id\">Add item</button>" . "</td>".
             "<td>" . "<button type=\"submit\" formaction=\"invoice.php?invoice_id=$url\">Invoice Details</button>" . "</td>".
+            "<td>" . "<button type=\"submit\" formaction=\"payment.php?invoice_id=$url&customer_id=$id\">Payment</button>" . "</td>".
             "</tr>";
     }
+    echo "</form>";
     echo "</table>";
 } else {
     echo "0 results";
