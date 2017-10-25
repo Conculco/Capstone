@@ -16,11 +16,9 @@ include 'access_control.php';
             }
             ?>
             <li class="current"><a href="index.php">Home</a></li>
-            <li><a href="searchcustomer.php">Search</a></li>
-            <li><a href="createcustomer.php">Customer</a></li>
-            <li><a href="walkin.php">Walk-Ins</a></li>
-            <li><a href="reception.php">Inventory</a></li>
+            <li><a href="searchcustomer.php">Search Customers</a></li>
+            <li><a href="createcustomer.php">Create Customers</a></li>
+            <li><a href="bookingdate.php">View Bookings</a></li>
         </ul>
     </nav>
 </header>
-

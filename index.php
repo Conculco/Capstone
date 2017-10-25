@@ -26,10 +26,10 @@ session_start();
   </section>
     <section id="howto">
       <div class ="container">
-        <h1>Request a Password Reset</h1>
+        <h1>Quick Customer Search</h1>
         <form>
-          <input type="email" placeholder="Enter Users Email">
-          <button type="submit" class="button1">Request a User Password Reset</button>
+          <input type="email" placeholder="Enter Customer Name">
+          <input type="submit">Find Customer</input>
         </form>
     </section>
     <section id="boxes">
