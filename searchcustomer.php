@@ -37,7 +37,7 @@ include("./configsqli.php");
     if ($result->num_rows > 0) {
         // output data of each row
         echo "<form action='' method='post'>";
-        echo "<table class=\"table\" align=\"center\">";
+        echo "<table style=\"width:60%\" class=\"table\" align=\"center\">";
         echo "<tr><th>Contact Number</th><th>Firstname</th><th>Lastname</th><th>Address</th><th>Email</th><th>Select</th><th>Edit</th></tr>";
         while($row = $result->fetch_assoc()) {
             $url = $row["customer_id"];
