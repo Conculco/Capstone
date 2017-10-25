@@ -34,12 +34,12 @@ include 'configsqli.php';
 
     $today = $_GET['date'];
     $date = $_GET['date'];
-    echo $date;
+    #echo $date;
 
 
     echo "<table style=width:10% border=1>";
     echo "<tr><td><b>";
-    echo date("l");
+    echo date('l, F jS, Y', strtotime($today));
     echo "<b></td></tr>";
 
     $sql = "SELECT * FROM Booking WHERE Booking.date = '$today'";
@@ -47,7 +47,7 @@ include 'configsqli.php';
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo $row["timeSlot"];
+            #echo $row["timeSlot"];
             array_push($rows, $row["timeSlot"]);
         }
     }
