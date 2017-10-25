@@ -3,6 +3,7 @@ session_start();
 $pet_id = $_GET['pet_id'];
 $bookingType = $_GET['bookingType'];
 $timeSlot = $_GET['timeSlot'];
+
 ?>
 <?php
 include 'configsqli.php';
@@ -94,9 +95,14 @@ include 'configsqli.php';
 
       <p><b>Booking Time</b>: <?php echo $_GET['date']?> <?php echo ", <b>Time Slot</b>: " ?><?php echo $timeslotarray[$_GET['timeSlot']]?></p>
 
-      <p><b>Has been confirmed.</b></p>
 
-      <p>A confirmation email has been sent to the following address</p>
+      <p>A confirmation email has been sent to <b><?php   $sql = "SELECT t1.email FROM Customer as t1 LEFT JOIN Pet as t2 ON t1.customer_id = t2.customer_id LEFT JOIN Booking as t3 ON t2.pet_id = t3.pet_id = 7 WHERE t2.pet_id = 7";
+      $result = $conn->query($sql);
+      while ($row = $result->fetch_assoc()) {
+        echo $row["email"];
+      }?></b></p>
+      <?php
+      ?>
 
 </div>
 <div class="whitespace"> </div>
