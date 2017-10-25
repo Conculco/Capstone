@@ -20,10 +20,10 @@ include 'header.php';
         <input name="customer_id" type="hidden" value="<?php echo $_GET['id'];?>">
 
         <label>Pet Name</label>
-        <input name="petname" type="text" placeholder="">
+        <input name="petname" type="text" required placeholder="">
 
         <label>Date of Birth</label>
-        <input name="dob" type="text" placeholder="">
+        <input name="dob" type="text" required placeholder="">
 
         <label>Sex</label>
         <select name="sex">
@@ -33,13 +33,13 @@ include 'header.php';
         </select>
 
         <label>Species</label>
-        <input name="species" type="text" placeholder="Cat/Dog">
+        <input name="species" type="text" required placeholder="Cat/Dog">
 
         <label>Breed</label>
-        <input name="breed" type="text" placeholder="">
+        <input name="breed" type="text" required placeholder="">
 
         <label>Description</label>
-        <input name="description" type="text" placeholder="description">
+        <input name="description" type="text" required placeholder="description">
 
         <label>microchip_id</label>
         <input name="microchip_id" type="text" placeholder="microchip_id">

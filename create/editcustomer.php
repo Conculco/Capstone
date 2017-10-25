@@ -2,12 +2,15 @@
 include("../config.php");
   try {
       $sql = "UPDATE Customer
-              SET firstname = :firstname, lastname = :lastname
+              SET emergencyContact = :emergencyContact, firstname = :firstname, lastname = :lastname, address = :address, email = :email
               WHERE customer_id = :id";
       $statement = $conn->prepare($sql);
       $statement->execute(array(
+              "emergencyContact" => $_POST['emergencyContact'],
               "firstname" => $_POST['firstname'],
               "lastname" => $_POST['lastname'],
+              "address" => $_POST['address'],
+              "email" => $_POST['email'],
               "id" => $_POST['id'],
         ));
 
