@@ -14,6 +14,8 @@ session_start();
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
+
+
 <style>
 p.small {
     line-height: 0.5;
@@ -21,6 +23,11 @@ p.small {
 
 p.big {
     line-height: 5.0;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
 }
 </style>
 <body>
