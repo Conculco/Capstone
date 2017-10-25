@@ -86,9 +86,7 @@ td.booked {
   background-color: #E8A18E
 }
 
-th{
-  background-color: #506077;
-}
+
 
 th, td{
   padding: 10px;
@@ -276,6 +274,7 @@ input[type=submit] {
 
 .footer{
   padding: 20px;
+  opacity:0.3;
   margin-top: 20px;
   color: #ffffff;
   background-color: #e8491d;
@@ -285,15 +284,13 @@ input[type=submit] {
 table.table {
   border: 3px solid #E8491D;
   background-color: #FAFAFA;
+  border-radius:6px;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
 }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-}
+
 
 table.table thead {
   background: #E8491D;
@@ -302,7 +299,16 @@ table.table thead {
   background: linear-gradient(to bottom, #ee7655 0%, #ea5b33 66%, #E8491D 100%);
   border-bottom: 2px solid #FFFFFF;
 }
-table.table thead th {
+table.table th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 2px solid #FFFFFF;
+}
+
+th {
+  background: linear-gradient(to bottom, #e8491d 0%, #ff6666 100%);
   font-size: 15px;
   font-weight: bold;
   color: #FFFFFF;

@@ -15,6 +15,7 @@ session_start();
 <?php
     include 'header.php';
 ?>
+<div class="whitespace"> </div>
 <div class="center2">
 <?php
     $id = $_GET['id'];
@@ -71,7 +72,7 @@ session_start();
 
 ?>
 </div>
-
+<div class="whitespace"> </div>
 <?php
     include 'footer.php';
 ?>

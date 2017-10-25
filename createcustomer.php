@@ -14,6 +14,7 @@ session_start();
 <?php
     include 'header.php';
 ?>
+<div class="whitespace"> </div>
     <div class="center">
         <form action="create/customerscript.php" method="post">
             <label>First Name</label>
