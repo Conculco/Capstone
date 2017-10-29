@@ -53,24 +53,6 @@ Email: LovelyPetsMilton@gmail.com <br/>
 
 <p> <br/>
 
-<p> Macgregor Lovely Pets Clinic<br/>
-99 Kessels Road <br/>
-Macgregor, 4109, Brisbane, Queensland<br/>
-Phone: (07) 3400 1002<br/>
-Email: LovelyPetsMacgregor@gmail.com <br/>
-</p>
-
-<p> <br/>
-
-<p> Carindale Lovely Pets Clinic<br/>
-188 Old Cleveland Road <br/>
-Carindale, 4152, Brisbane, Queensland<br/>
-Phone: (07) 3400 1003<br/>
-Email: LovelyPetsCarindale@gmail.com <br/>
-</p>
-
-<p> <br/>
-
 <p> Newmarket Lovely Pets Clinic<br/>
 5 Mina Parade <br/>
 Newmarket, 4978, Brisbane, Queensland<br/>

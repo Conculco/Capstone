@@ -48,7 +48,6 @@ include 'header.php';
     <div id="map"></div>
 
 
-<p>To find your local vet enter your post code below: </p>
     <script>
 
         function initMap() {
