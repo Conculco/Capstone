@@ -66,7 +66,7 @@ include 'header.php';
         }
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5P_KBg5jJf9BuauNsSjmSD_Ve35qm9HU&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=############&callback=initMap">
     </script>
 
 
